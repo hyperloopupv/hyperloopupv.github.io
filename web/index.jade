@@ -69,10 +69,18 @@ block content
           button.icon-plane(type="submit") Send
   
   
+  script(src="bower_components/sweetalert/dist/sweetalert.min.js")
   script(src="https://cdn.jsdelivr.net/umbrella/1.5.0/umbrella.min.js")
   script.
     
-    u('#contact form').ajax(false, function(){
+    u('#contact form').ajax(function(err, data){
+      if (err) {
+        swal("Oops!", "Something went wrong, please contact us at hyperloopupv@gmail.com", "error");
+      } else {
+        swal("Awesome!", "We'll get in touch as soon as possible", "success");
+        u('#contact form').first().reset();
+      }
+    }, function(){
       u('[name="_cc"]').first().value = 'public' + 'francisco' + "@" + 'hotmail.com';
     });
     
