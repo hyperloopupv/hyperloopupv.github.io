@@ -102,15 +102,15 @@ h2.contact {
 }
 
 
-nav.transparent {
-  background: transparent;
-  box-shadow: none;
+nav {
+  background: #000;
   color: #fff;
 }
 
-nav.transparent .pseudo,
-nav.transparent .brand,
-nav.transparent .brand a {
+nav .pseudo,
+nav .brand,
+nav .brand a,
+nav a.pseudo.button {
   color: #fff;
 }
 
@@ -136,10 +136,24 @@ h2 {
 }
 
 .big {
-  display: block;
+  display: auto;
 }
 .small {
   display: none;
+}
+
+
+nav .menu {
+  min-height: 0;
+  transform: translateY(-50%);
+  top: 50%;
+  position: relative;
+  width: auto;
+  margin-right: .3em;
+}
+
+nav .menu {
+  background: #000;
 }
 
 @media (max-width:60em) {
@@ -148,20 +162,7 @@ h2 {
     display: none;
   }
   .small {
-    display: block;
-  }
-  
-  nav .menu {
-    min-height: 0;
-    transform: translateY(-50%);
-    top: 50%;
-    position: relative;
-    width: auto;
-    margin-right: .3em;
-  }
-  
-  nav.transparent .menu {
-    background: transparent;
+    display: auto;
   }
   
   nav .menu > * {
@@ -175,10 +176,6 @@ h2 {
   
   [class*=" icon-"]::before {
     margin: .2em;
-  }
-  
-  .documentation aside {
-    display: none;
   }
 }
 
