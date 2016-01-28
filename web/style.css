@@ -135,6 +135,9 @@ h2 {
   to { bottom: 20px; }
 }
 
+.big {
+  display: auto;
+}
 .small {
   display: none;
 }
@@ -159,7 +162,7 @@ nav .menu {
     display: none;
   }
   .small {
-    display: auto;
+    display: block;
   }
   
   nav .menu > * {
