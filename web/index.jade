@@ -52,21 +52,28 @@ block content
   
   
   section#contact.contact
-    h2.contact Discover Hyperloop
-    div.row
-      div
-        input(placeholder="Name")
-      div
-        input(placeholder="Email")
-    div.row
-      div
-        textarea(placeholder="Message")
-    div.row
-      div
-        button.icon-plane(type="submit") Send
+    form(method="POST" action="https://formspree.io/hyperloopupv@gmail.com")
+      h2.contact Discover Hyperloop
+      div.row
+        div
+          input(placeholder="Name")
+        div
+          input(placeholder="Email")
+      div.row
+        div
+          textarea(placeholder="Message")
+      div.row
+        div
+          button.icon-plane(type="submit") Send
   
   
+  script(src="https://cdn.jsdelivr.net/umbrella/1.5.0/umbrella.min.js")
   script.
+    
+    u('#contact form').ajax(function(err, done){
+      alert("Thank you!");
+    });
+    
     window.onscroll = function(e){
       if (e.pageY > 50) {
         document.querySelector('nav').classList.remove('transparent');
