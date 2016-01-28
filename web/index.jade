@@ -56,12 +56,12 @@ block content
       h2.contact Discover Hyperloop
       div.row
         div
-          input(placeholder="Name")
+          input(name="name" placeholder="Name")
         div
-          input(placeholder="Email")
+          input(name="email" placeholder="Email")
       div.row
         div
-          textarea(placeholder="Message")
+          textarea(name="message" placeholder="Message")
       div.row
         div
           button.icon-plane(type="submit") Send
@@ -70,7 +70,15 @@ block content
   script(src="https://cdn.jsdelivr.net/umbrella/1.5.0/umbrella.min.js")
   script.
     
-    u('#contact form').ajax(function(){});
+    u('#contact form').ajax();
+    //- u('#contact form').on('submit', function(e){
+    //-   e.preventDefault();
+    //-   var data = {
+    //-     '_subject': 'Web Contact',
+    //-     '_cc': 'public' + 'francisco' + '@hotmail.com'
+    //-   };
+    //-   ajax('POST', "https://formspree.io/publicfrancisco@hotmail.com");
+    //- });
     
     window.onscroll = function(e){
       if (e.pageY > 50) {
