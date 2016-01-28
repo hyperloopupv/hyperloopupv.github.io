@@ -64,6 +64,10 @@ h1, h2 {
 
 
 
+.subtitle {
+  text-align: center;
+}
+
 
 section.row {
   background: #fff;
@@ -80,11 +84,10 @@ section.row {
 
 
 .team {
-  margin-top: 50px;
+  margin: 50px auto;
   display: block;
-  height: 500px;
-  background: #adf url("team.jpg") repeat top left;
-  background-size: cover;
+  width: 100%;
+  max-width: 2000px;
 }
 
 section.contact {
@@ -160,7 +163,7 @@ h2 {
   }
 }
 
-@media (max-width: 38em) {
+@media (max-width: 40em) {
   nav .menu {
     margin: 0;
     padding-right: .3em;

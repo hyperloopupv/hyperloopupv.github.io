@@ -6,11 +6,6 @@ module.exports = function (grunt) {
   // Configuration
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    
-    uglify: {
-      options: { banner: '/* Umbrella JS ' + require('./package').version + ' umbrellajs.com */\n'},
-      build: { src: 'umbrella.js', dest: 'umbrella.min.js' }
-    },
 
     watch: {
       scripts: {
@@ -50,9 +45,6 @@ module.exports = function (grunt) {
   // Concatenate
   grunt.loadNpmTasks('grunt-contrib-concat');
 
-  // Minify
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-
   // Watch
   grunt.loadNpmTasks('grunt-contrib-watch');
   
@@ -61,5 +53,5 @@ module.exports = function (grunt) {
 
 
   // 4. Where we tell Grunt what to do when we type "grunt" into the terminal
-  grunt.registerTask('default', ['uglify', 'jade']);
+  grunt.registerTask('default', ['jade']);
 };
