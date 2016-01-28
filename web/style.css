@@ -124,6 +124,10 @@ h2 {
   line-height: 1;
 }
 
+.social {
+  text-align: right;
+}
+
 
 @keyframes bounce {
   from { bottom: 20px; }
