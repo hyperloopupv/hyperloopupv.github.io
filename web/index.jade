@@ -56,12 +56,12 @@ block content
       h2.contact Discover Hyperloop
       div.row
         div
-          input(name="name" placeholder="Name")
+          input(name="name" placeholder="Name" required)
         div
-          input(name="email" placeholder="Email")
+          input(type="email" name="email" placeholder="Email" required)
       div.row
         div
-          textarea(name="message" placeholder="Message")
+          textarea(name="message" placeholder="Message" required)
       div.row
         div
           input(type="hidden" name="_subject" value="Web Contact")
