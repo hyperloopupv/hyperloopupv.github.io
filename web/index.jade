@@ -64,13 +64,17 @@ block content
           textarea(name="message" placeholder="Message")
       div.row
         div
+          input(type="hidden" name="_subject" value="Web Contact")
+          input(type="hidden" name="_cc" value="")
           button.icon-plane(type="submit") Send
   
   
   script(src="https://cdn.jsdelivr.net/umbrella/1.5.0/umbrella.min.js")
   script.
     
-    u('#contact form').ajax();
+    u('#contact form').ajax(false, function(){
+      u('[name="_cc"]').first().value = 'public' + 'francisco' + "@" + 'hotmail.com';
+    });
     
     window.onscroll = function(e){
       if (e.pageY > 50) {
