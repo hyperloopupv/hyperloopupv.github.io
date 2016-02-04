@@ -62,21 +62,13 @@ h1, h2 {
   background: none;
 }
 
-.hero .notice,
 section.notice {
-  position: absolute;
   width: 100%;
   margin-top: 50px;
   background: none;
   text-shadow: none;
   color: #fff;
   padding: 10px;
-  background: rgba(255, 50, 50, .3);
-}
-
-section.notice {
-  display: none;
-  position: relative;
   background: rgba(150, 0, 0, .8);
   margin-top: 0;
 }
@@ -186,14 +178,6 @@ footer {
 }
 
 @media (max-width:60em) {
-  
-  .hero .notice {
-    display: none;
-  }
-  
-  section.notice {
-    display: block;
-  }
   
   .big {
     display: none;
