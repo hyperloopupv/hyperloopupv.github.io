@@ -67,13 +67,14 @@ section.notice {
   margin-top: 50px;
   background: none;
   text-shadow: none;
-  color: #fff;
+  color: #333;
   padding: 10px;
-  background: rgba(150, 0, 0, .8);
+  background: rgba(250, 0, 0, .2);
   margin-top: 0;
+  text-align: center;
 }
 section.notice a {
-  color: #fff;
+  color: #333;
   text-decoration: underline;
 }
 
