@@ -190,6 +190,35 @@ footer {
   margin-top: 100px;
 }
 
+#logos > div {
+	text-align: center;
+	width: 100%;
+	display: block;
+}
+
+#sponsors img {
+	display: inline-block;
+	width: 25%;
+	margin-right: 4%;
+	vertical-align: middle;
+}
+
+img#vanidadUPV {
+	width: 30%;
+	margin-right: 0;
+	position: relative;
+	top: -4px;
+}
+
+#project-logo {
+	margin-top: 50px;
+}
+
+#project-logo img {
+	margin-top: 5%;
+	width: 40%;
+}
+
 @media (max-width:60em) {
   
   .big {
