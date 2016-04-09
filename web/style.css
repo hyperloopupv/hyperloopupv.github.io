@@ -196,11 +196,25 @@ footer {
 	display: block;
 }
 
-#sponsors img {
+.logo-row img {
 	display: inline-block;
+	vertical-align: middle;
+}
+
+#sponsors img {
 	width: 25%;
 	margin-right: 4%;
-	vertical-align: middle;
+}
+
+#as-seen-on div {
+	text-align: center;
+	overflow-y: scroll;
+}
+
+#as-seen-on img {
+	width: 15%;
+	margin: 0 10px !important;
+	margin: auto;
 }
 
 img#vanidadUPV {
