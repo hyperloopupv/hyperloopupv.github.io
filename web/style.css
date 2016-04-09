@@ -219,6 +219,10 @@ img#vanidadUPV {
 	width: 40%;
 }
 
+#nav-buttons {
+	text-align: center;
+}
+
 @media (max-width:60em) {
   
   .big {
