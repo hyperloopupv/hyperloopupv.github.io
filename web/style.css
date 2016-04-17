@@ -12,6 +12,10 @@ h1, h2 {
 	background-color: red;
 }
 
+[class*=" icon-"]::before {
+	width: auto;
+}
+
 .hero {
   background: #000;
   position: relative;
