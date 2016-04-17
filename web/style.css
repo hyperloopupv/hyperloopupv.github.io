@@ -9,17 +9,17 @@ h1, h2 {
 }
 
 .button.icon-heart {
-	background-color: red;
+  background-color: red;
 }
 
 [class*="icon-"]::before {
-	width: auto;
-	margin-right: .4em;
-	margin-left: 0;
+  width: auto;
+  margin-right: .4em;
+  margin-left: 0;
 }
 
 .menu [class*="icon-"]::before {
-	margin: .2em;
+  margin: .2em;
 }
 
 .hero {
@@ -204,43 +204,43 @@ footer {
 }
 
 .logo-row {
-	text-align: center;
+  text-align: center;
 }
 
 .logo-row img {
-	display: inline-block;
-	vertical-align: middle;
-	max-width: 25%;
-	max-height: 150px;
-	width: auto;
-	height: auto;
-	padding: 2.5%;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 25%;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  padding: 2.5%;
 }
 
 .logo-row h2 {
-	margin-top: 25px;
-	margin-bottom: 10px;
-	text-align: center;
-	width: 100%;
-	display: block;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+  display: block;
 }
 
 img#vanidadUPV {
-	max-width: 30%;
+  max-width: 30%;
 }
 
 #colophon {
-	margin-top: 50px;
-	text-align: center;
+  margin-top: 50px;
+  text-align: center;
 }
 
 #colophon #project-logo {
-	max-width: 400px;
-	display: inline-block;
+  max-width: 400px;
+  display: inline-block;
 }
 
 #nav-buttons {
-	text-align: center;
+  text-align: center;
 }
 
 @media (max-width:60em) {
