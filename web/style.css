@@ -219,13 +219,14 @@ img#vanidadUPV {
 	max-width: 30%;
 }
 
-#project-logo {
+#colophon {
 	margin-top: 50px;
+	text-align: center;
 }
 
-#project-logo img {
-	margin-top: 5%;
-	width: 40%;
+#colophon #project-logo {
+	max-width: 400px;
+	display: inline-block;
 }
 
 #nav-buttons {
