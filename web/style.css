@@ -8,6 +8,10 @@ h1, h2 {
   font-weight: 100;
 }
 
+.button.icon-heart {
+	background-color: red;
+}
+
 .hero {
   background: #000;
   position: relative;
