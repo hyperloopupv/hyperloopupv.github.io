@@ -12,8 +12,14 @@ h1, h2 {
 	background-color: red;
 }
 
-[class*=" icon-"]::before {
+[class*="icon-"]::before {
 	width: auto;
+	margin-right: .4em;
+	margin-left: 0;
+}
+
+.menu [class*="icon-"]::before {
+	margin: .2em;
 }
 
 .hero {
@@ -253,10 +259,6 @@ img#vanidadUPV {
   
   nav .menu > a {
     padding: .3em .6em;
-  }
-  
-  [class*=" icon-"]::before {
-    margin: .2em;
   }
 }
 
