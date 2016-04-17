@@ -86,7 +86,6 @@ section.notice a {
   text-align: center;
 }
 
-
 section.row {
   background: #fff;
   text-align: left;
@@ -194,37 +193,30 @@ footer {
   margin-top: 100px;
 }
 
-#logos > div {
+.logo-row {
 	text-align: center;
-	width: 100%;
-	display: block;
 }
 
 .logo-row img {
 	display: inline-block;
 	vertical-align: middle;
+	max-width: 25%;
+	max-height: 150px;
+	width: auto;
+	height: max-content;
+	padding: 2.5%;
 }
 
-#sponsors img {
-	width: 25%;
-	margin-right: 4%;
-}
-
-#as-seen-on div {
+.logo-row h2 {
+	margin-top: 25px;
+	margin-bottom: 10px;
 	text-align: center;
-}
-
-#as-seen-on img {
-	width: 15%;
-	margin: 0 10px !important;
-	margin: auto;
+	width: 100%;
+	display: block;
 }
 
 img#vanidadUPV {
-	width: 30%;
-	margin-right: 0;
-	position: relative;
-	top: -4px;
+	max-width: 30%;
 }
 
 #project-logo {
