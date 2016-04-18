@@ -14,10 +14,10 @@ block content
       |  
       a.button.icon-newspaper(href="https://drive.google.com/folderview?id=0B6yBcBUjVi8ZbF9yZFBKTEluQ1E" target="_blank") Press release
       |  
-      a.button.icon-heart(href="#contact") Support us
+      a.button.icon-plane(href="#contact") Contact
   
-  section.row.logo-row#as-seen-on
-    div
+  section.row
+    div.logo-row
       h2 As seen on
       img(src="web/img/as-seen-on/a3.png")
       img(src="web/img/as-seen-on/engineering.jpg")
@@ -87,7 +87,7 @@ block content
   
   section#contact.contact
     form(method="POST" action="https://formspree.io/hyperloopupv@gmail.com")
-      h2.contact Discover Hyperloop
+      h2.contact Support Hyperloop
       div.row
         div
           input(name="name" placeholder="Name" required)
@@ -109,20 +109,34 @@ block content
             a.pseudo.button.icon-t(href="https://twitter.com/hyperloopupv" taget="_blank")
               span.big Twitter
   
-  section.row.logo-row#logos
-    div#sponsors
+  section.row#sponsors
+    div.logo-row
       h2 Sponsors
-      img(src="web/img/logo_stadler.png")
-      img(src="web/img/logo_etsid.jpg")
-      img#vanidadUPV(src="web/img/logo_upv.png")
-    div#project-logo
-      img(src="web/img/logo.png")
+      img(src="web/img/sponsors/stadler.png")
+      img(src="web/img/sponsors/etsid.jpg")
+      img#vanidadUPV(src="web/img/sponsors/upv.png")
+  
+  section.row#partners
+    div.logo-row
+      h2 Partners
+      img(src="web/img/partners/makers.png")
+      img(src="web/img/partners/ge.png")
+  
+  section.row#colophon
+    div
+      img#project-logo(src="web/img/logo.png")
+      h3.subtitle
+        em It's transportation. It's attraction. It's future.
   
   footer
     p Website made with ♥ by 
       a(href="http://francisco.io/" target="_blank") Francisco Presencia
-      |  and logo by 
+      | , 
       a(href="https://www.linkedin.com/in/demetriomb" target="_blank") Demetrio Muñoz
+      | , 
+      a(href="" target="_blank") Pepe Vicén
+      |  and 
+      a(href="https://www.linkedin.com/in/carlosprecioso" target="_blank") Carlos Precioso
   
   script(src="bower_components/sweetalert/dist/sweetalert.min.js")
   script(src="https://cdn.jsdelivr.net/umbrella/1.5.0/umbrella.min.js")

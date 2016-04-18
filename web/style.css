@@ -8,6 +8,20 @@ h1, h2 {
   font-weight: 100;
 }
 
+.button.icon-heart {
+  background-color: red;
+}
+
+[class*="icon-"]::before {
+  width: auto;
+  margin-right: .4em;
+  margin-left: 0;
+}
+
+.menu [class*="icon-"]::before {
+  margin: .2em;
+}
+
 .hero {
   background: #000;
   position: relative;
@@ -81,7 +95,6 @@ section.notice a {
 .subtitle {
   text-align: center;
 }
-
 
 section.row {
   background: #fff;
@@ -190,50 +203,44 @@ footer {
   margin-top: 100px;
 }
 
-#logos > div {
-	text-align: center;
-	width: 100%;
-	display: block;
+.logo-row {
+  text-align: center;
 }
 
 .logo-row img {
-	display: inline-block;
-	vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 25%;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  padding: 2.5%;
 }
 
-#sponsors img {
-	width: 25%;
-	margin-right: 4%;
-}
-
-#as-seen-on div {
-	text-align: center;
-}
-
-#as-seen-on img {
-	width: 15%;
-	margin: 0 10px !important;
-	margin: auto;
+.logo-row h2 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+  display: block;
 }
 
 img#vanidadUPV {
-	width: 30%;
-	margin-right: 0;
-	position: relative;
-	top: -4px;
+  max-width: 30%;
 }
 
-#project-logo {
-	margin-top: 50px;
+#colophon {
+  margin-top: 50px;
+  text-align: center;
 }
 
-#project-logo img {
-	margin-top: 5%;
-	width: 40%;
+#colophon #project-logo {
+  max-width: 400px;
+  display: inline-block;
 }
 
 #nav-buttons {
-	text-align: center;
+  text-align: center;
 }
 
 @media (max-width:60em) {
@@ -252,10 +259,6 @@ img#vanidadUPV {
   
   nav .menu > a {
     padding: .3em .6em;
-  }
-  
-  [class*=" icon-"]::before {
-    margin: .2em;
   }
 }
 
