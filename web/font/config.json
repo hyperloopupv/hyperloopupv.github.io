@@ -65,6 +65,12 @@
       "css": "heart",
       "code": 59401,
       "src": "fontawesome"
+    },
+    {
+      "uid": "5408be43f7c42bccee419c6be53fdef5",
+      "css": "doc",
+      "code": 59402,
+      "src": "fontawesome"
     }
   ]
 }
