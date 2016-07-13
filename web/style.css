@@ -217,6 +217,10 @@ footer {
   padding: 2.5%;
 }
 
+.logo-row .high img {
+    max-width: 25%;
+}
+
 .logo-row h2 {
   margin-top: 25px;
   margin-bottom: 10px;
