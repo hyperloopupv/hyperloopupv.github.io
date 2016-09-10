@@ -1,4 +1,4 @@
-# Hyperloop UPV
+# Hyperloop UPV Dev
 
 Para bajaros la web con git, hace falta:
 
@@ -15,7 +15,7 @@ grunt watch
 
 Esto instalará todas las dependencias y esperará a que cambiéis cosas para compilar los archivos nuevos. Una vez hayáis hecho algún cambio podéis verlo abriendo `index.html` (que se habrá generado automáticamente).
 
-Para subir los cambios, hacer esto (tenéis que estar autorizados en Github, por ahora sólo German):
+Para subir los cambios, hacer esto:
 
 ```bash
 git add .
