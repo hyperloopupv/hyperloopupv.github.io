@@ -1,21 +1,12 @@
 # Hyperloop UPV Dev
 
-Para bajaros la web con git, hace falta:
+Para bajaros la web con git:
 
 ```bash
-git clone git@github.com:hyperloopupv/hyperloopupv.github.io.git && cd ./hyperloopupv
+git clone git@github.com:hyperloopupv/hyperloopupv.github.io.git
 ```
 
-Para modificar la web, instalar npm y ejecutar:
-
-```bash
-npm install
-grunt watch
-```
-
-Esto instalará todas las dependencias y esperará a que cambiéis cosas para compilar los archivos nuevos. Una vez hayáis hecho algún cambio podéis verlo abriendo `index.html` (que se habrá generado automáticamente).
-
-Para subir los cambios, hacer esto:
+Para subir los cambios:
 
 ```bash
 git add .
@@ -23,4 +14,4 @@ git commit -m "New changes"
 git push origin master
 ```
 
-Github se está usando como hosting, así que una vez hayáis hecho lo anterior, unos minutos después ya estarán los cambio en vivo
+Github se está usando como hosting, así que una vez hayáis hecho lo anterior, unos minutos después ya estarán los cambio en vivo.
