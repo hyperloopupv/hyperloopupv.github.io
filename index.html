@@ -1,93 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Hyperloop UPV</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="hyperloop, valencia, upv, makers">
     <meta name="description" content="A levitating rail-free pod design for SpaceX’s Hyperloop Global Competition by Makers UPV">
-    <meta property="og:url" content="http://hyperloopupv.com/">
+    <meta property="og:url" content="http://hyperloopupv.com">
     <meta property="og:title" content="Hyperloop UPV">
     <meta property="og:description" content="A levitating rail-free pod design for SpaceX’s Hyperloop Global Competition by Makers UPV">
     <meta property="og:image" content="http://hyperloopupv.com/img/levitation.jpg">
-    <link rel="icon" href="img/logo-icon.png" type="image/png" />
-    <link href="fontello.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/picnicss/5.0.1/plugins.min.css" rel="stylesheet">
+    
+    <link href="img/logo-icon.png" rel="shortcut icon" type="image/png">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="bower_components/sweetalert/dist/sweetalert.css">
 </head>
 <body>
-    <nav class="transparent">
-        <div class="brand">
-            <a href="#"><img src="img/logo.png" class="logo"><span class="big">Hyperloop UPV</span></a>
-        </div>
-        <div class="menu">
-            <a href="https://drive.google.com/folderview?id=0B6yBcBUjVi8ZbF9yZFBKTEluQ1E" target="_blank" class="pseudo button icon-newspaper"> <span class="text">Press</span></a>
-            <a href="#tech" class="pseudo button icon-train"> <span class="text">Tech</span></a>
-            <a href="#team" class="pseudo button icon-users"> <span class="text">Team</span></a>
-            <a href="#contact" class="button icon-heart"> <span class="text">Support us</span></a>
+    
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="img/logo.png">Hyperloop UPV</a>
+            </div>
+            
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Tech</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <header id="video" class="hero">
-        <div class="popup"><a href="https://docs.google.com/forms/d/e/1FAIpQLSch03g9Mj3-BAu0TKmstayxU9PxaBiflnD4ysLB-ggHsch46g/viewform">Abiertas inscripciones a HyperloopUPV: ayúdanos a crear el transporte del futuro.</a></div>
-        <div class="content">
-            <iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/FmeFe8E2zXg?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;autoplay=1" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <a href="#tech" class="keepgoing">▼</a>
+    
+    <header class="video">
+        <iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/FmeFe8E2zXg?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;autoplay=1" frameborder="0" allowfullscreen></iframe>
     </header>
-    <section id="tech" class="row">
-        <h3 class="subtitle"><em>“A levitating rail-free pod design for SpaceX’s Hyperloop Global Competition”</em></h3>
-        <div id="nav-buttons"><a href="Report.pdf" download="Technical Report Makers UPV Team Hyperloop.pdf" target="_blank" class="button icon-magnet">Technical Report</a> <a href="https://drive.google.com/folderview?id=0B6yBcBUjVi8ZbF9yZFBKTEluQ1E" target="_blank" class="button icon-newspaper">Press release</a> <a href="https://drive.google.com/open?id=0B6yBcBUjVi8ZUVBKY25hRnp0cE0" target="_blank" class="button icon-doc">Magazine</a> <a href="#contact" class="button icon-plane">Contact</a></div>
-    </section>
-    <section class="row">
-        <div class="logo-row">
-            <h2>As seen on</h2><img src="img/as-seen-on/a3.png"><img src="img/as-seen-on/engineering.jpg"><img src="img/as-seen-on/geekwire.png"><img src="img/as-seen-on/kic.png"><img src="img/as-seen-on/marcaespana.jpg"><img src="img/as-seen-on/rtve.png"><img src="img/as-seen-on/texas_am.png"><img src="img/as-seen-on/upv_rtv.png"><img src="img/as-seen-on/cac.jpg"><img src="img/as-seen-on/tedx.jpg"><img src="img/as-seen-on/xataka.jpg"></div>
-    </section>
-    <section class="row">
-        <div><img src="img/levitation.jpg"></div>
-        <div>
-            <h2>Levitation</h2>
-            <p>The pod is equipped with a hybrid system of permanent magnet and electromagnet units being able to control lift, so it can hover from the top of the tube. </p>
-            <p>Say goodbye to magnetic repulsion, it’s time for attraction!</p>
+    
+    <section id="awards" class="bg-black">
+        <div class="container">
+            <div class="row text-center">
+                <h2>"Top Design Concept"</h2>
+                <h2>"Top Design Concept" and "Propulsion/Compression Subsystem Technical Excellence" awards at SpaceX's Hyperloop Design Weekend 2016</h2>
+            </div>
+        </div>
+        <div class="container">
+            <img src="img/competition.png" class="img-responsive center-block">
         </div>
     </section>
-    <section class="row">
-        <div class="small"><img src="img/aerodynamics.jpg"></div>
-        <div>
-            <h2>Aerodynamics</h2>
-            <p>Propulsion is obtained by expansion of the air with a nozzle located at the rear of the pod achieving speeds up to 1000 kilometers per hour. The turbine recovers energy from the flow, allowing a more efficient journey.</p>
+    
+    <section id="media">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>As seen on</h2>
+                </div>
+            </div>
         </div>
-        <div class="big"><img src="img/aerodynamics.jpg"></div>
+        <div class="container">
+            <div class="row">
+                <img src="img/media/a3.png">
+                <img src="img/media/engineering.png">
+                <img src="img/media/geekwire.png">
+                <img src="img/media/kic.png">
+                <img src="img/media/marcaespana.png">
+                <img src="img/media/rtve.png">
+                <img src="img/media/texas_am.png">
+                <img src="img/media/upv_rtv.png">
+                <img src="img/media/cac.png">
+                <img src="img/media/tedx.png">
+                <img src="img/media/xataka.png">
+            </div>
+        </div>
+        
     </section>
-    <section class="row">
-        <div><img src="img/ergonomics.jpg"></div>
-        <div>
-            <h2>Structure</h2>
-            <p>The structure has been designed in reinforced carbon fiber. Furthermore, structural ribs are used to optimize the stress distribution across the cabin due to the pressure loading and thus ensure optimum material use in the passenger cabin.</p>
-            <p>A clean and ergonomic cabin layout offers the possibility to fit up to 30 passengers. </p>
+    
+    <section id="values" class="bg-black">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3 text-center">
+                    <img src="img/values/railfree.png" class="img-responsive img-circle center-block">
+                    <h3>Rail-free design</h3>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 text-center">
+                    <img src="img/values/drop.png" class="img-responsive img-circle center-block">
+                    <h3>Clean tube layout</h3>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 text-center">
+                    <img src="img/values/container.png" class="img-responsive img-circle center-block">
+                    <h3>Enhanced scalability</h3>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 text-center">
+                    <img src="img/values/money.png" class="img-responsive img-circle center-block">
+                    <h3>Savings in infrastructure</h3>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="row">
-        <div class="small"><img src="img/control.jpg"></div>
-        <div>
-            <h2>Control</h2>
-            <p>A system of multiple and redundant sensors with state-of-the-art technologies are used to achieve a fault-tolerant system offering a smooth journey. </p>
-        </div>
-        <div class="big"><img src="img/control.jpg"></div>
-    </section>
-    <section class="row">
-        <div><img src="img/scalability.jpg"></div>
-        <div>
-            <h2>Scalability</h2>
-            <p>A system of multiple and redundant sensors with state-of-the-art technologies are used to achieve a fault-tolerant system offering a smooth journey. </p>
-        </div>
-    </section><img id="team" src="img/team.jpg" class="team">
-    <section class="row names">
-        <div><a href="https://www.linkedin.com/in/abenedicto" class="pseudo button">Ángel Benedicto</a><a href="https://www.linkedin.com/in/dorient" class="pseudo button">Daniel Orient</a></div>
-        <div><a href="https://www.linkedin.com/in/dpistoni" class="pseudo button">David Pistoni</a><a href="https://www.linkedin.com/in/gretorro" class="pseudo button">Germán Torres</a></div>
-        <div><a href="https://www.linkedin.com/in/juanviba" class="pseudo button">Juan Vicén</a><a href="https://www.upv.es/pls/oalu/sic_per.info_persona?PE=K5MRNhA8C7i81B6flitPYIJjBkeFaZvZ%2FwbsZNm7OV9F5qfM5p60C3aFOtRc0p0zpuPXgF6rU1gam2wjf%2FXa6WlsTJ8URoFpwHlLO9SFsFfW4WCXUhpPOQ%3D%3D" class="pseudo button">Prof. Vicente Dolz [Advisor]</a></div>
-    </section>
-    <section id="contact" class="contact">
+    
+    <section id="contact">
+        <div class="container">
+            <div class="row">
         <form method="POST" action="https://formspree.io/hyperloopupv@gmail.com">
             <h2 class="contact">Support Hyperloop</h2>
             <div class="row">
@@ -107,40 +130,47 @@
                 <div>
                     <input type="hidden" name="_subject" value="Web Contact">
                     <input type="hidden" name="_cc" value="">
-                    <button type="submit" class="icon-plane">Send</button><span class="social"><a href="https://www.facebook.com/Hyperloop-UPV-Team-1530701900582389/?fref=ts" taget="_blank" class="pseudo button icon-f"><span class="big">Facebook</span></a> <a href="https://twitter.com/hyperloopupv" taget="_blank" class="pseudo button icon-t"><span class="big">Twitter</span></a></span>
+                    <button type="submit" class="icon-plane">Send</button>
                 </div>
             </div>
         </form>
-    </section>
-    <section id="sponsors" class="row">
-        <div class="logo-row">
-            <h2>Our partners</h2>
-            <div class="row high"><img src="img/sponsors/nagares.png"><img src="img/sponsors/upv.png"></div>
-            <div class="row middle"><img src="img/sponsors/jesiva.png"><img src="img/sponsors/istobal.png"></div>
-            <div class="row low"> <img src="img/sponsors/ge.png"><img src="img/sponsors/stadler.png"><img src="img/sponsors/makers.png"><img src="img/sponsors/etsid.jpg"></div>
+            </div>
         </div>
     </section>
-    <section id="colophon" class="row">
-        <div><img id="project-logo" src="img/logo.png">
-            <h3 class="subtitle"><em>It's transportation. It's attraction. It's future.</em></h3></div>
+    
+    <section id="social" class="bg-black">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Stay tuned</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row icon">
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <img src="img/social/twitter.png" class="img-responsive center-block">
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <img src="img/social/facebook.png" class="img-responsive center-block">
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <img src="img/social/youtube.png" class="img-responsive center-block">
+                </div>
+            </div>
+        </div>
     </section>
+    
     <footer>
-        <p>Website made with ♥ by <a href="http://francisco.io/" target="_blank">Francisco Presencia</a>, <a href="https://www.linkedin.com/in/demetriomb" target="_blank">Demetrio Muñoz</a>, <a href="" target="_blank">Pepe Vicén</a>, <a href="https://www.linkedin.com/in/carlosprecioso" target="_blank">Carlos Precioso</a> and <a href="https://github.com/seravifer" target="_blank">Sergi Avila</a></p>
+        <div class="container">
+            <div class="row">
+                <img src="img/hyperlogo.png" class="img-responsive">
+            </div>
+        </div>
     </footer>
-    <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/umbrella/1.5.0/umbrella.min.js"></script>
-    <script>
-        u('#contact form').ajax(function (err, data) {
-            if (err) {
-                swal("Oops!", "Something went wrong, please contact us at hyperloopupv@gmail.com", "error");
-            } else {
-                swal("Awesome!", "We'll get in touch as soon as possible", "success");
-                u('#contact form').first().reset();
-            }
-        }, function () {
-            u('[name="_cc"]').first().value = 'public' + 'francisco' + "@" + 'hotmail.com';
-        });
-    </script>
-</body>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    
+</body>
 </html>
