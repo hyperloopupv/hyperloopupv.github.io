@@ -1,27 +1,36 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,700);
+
 .navbar {
     position: fixed;
     z-index: 100;
     line-height: 5rem;
-    top:0;
-    left:0;
-    right:0;
-    height: 5rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
     padding-left: 5%;
     padding-right: 5%;
-    -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
 }
+
 .navbar h1 {
-    float:left;
+    float: left;
     margin: 0;
     padding: 0;
     vertical-align: middle;
+    color: #fff;
 }
 
 .navbar img {
-    max-height: 100%;
-    float: left;
-    margin-right: 1rem;
+    padding: 0;
+    max-height: 60%;
+    position: absolute;  
+    top: 0;  
+    bottom: 0;
+    left: 0;
+    padding-left: 5vw;
+    margin: auto;  
 }
 
 .navbar ul {
@@ -33,18 +42,31 @@
 
 .navbar ul li {
     float: left;
-    padding-left:5vw;
+    padding-left: 5vw;
+
 }
 
+.navbar a {
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: "Open Sans", arial, sans-serif;
+    font-size: 14px;
+    color: rgba(255,255,255, .7);
+    transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+}
 
-.brgr {
+.navbar a:hover {
+    color: #fff;
+}
+
+.menu {
     float: right;
-    position:relative;
+    position: relative;
     margin-top: 1rem;
-    width:3rem;
-    height:3rem;
-    border: 1px solid #eee;
-    border-radius: 5px;
+    width: 2rem;
+    height: 2rem;
     display: none;
     line-height: 3rem;
     vertical-align: middle;
@@ -52,43 +74,61 @@
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
+
+.menu div {
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+}
+
+.move {
+    background-color: #000;
+}
+
 @media only screen and (max-width : 992px) {
+    
     .navbar {
         padding-left:2%;
         padding-right:2%;
     }
+    
     .navbar ul li {
         padding-left:2vw;
     }
+    
 }
+
 @media only screen and (max-width : 768px) {
+    
     .navbar {
         text-align: center;
     }
+    
     .links, .links ul {
         display: none;
         -webkit-transition: all 0.4s ease;
         transition: all 0.4s ease;
     }
+    
     .navbar h1 {
         float: left;
         display: inline-block;
     }
-    .brgr {
+    
+    .menu {
         display: inline-block !important;
     }
-    .brgr:active {
-        background-color: rgba(222,222,222,.75);
+    
+    .menu:hover {
         cursor: pointer;
     }
 
-    img {
-        display: none;
-    }
     .open {
         height: auto !important;
 
     }
+    
     .open ul {
         float: none !important;
     }
@@ -100,4 +140,5 @@
     .open > .links, .open > .links ul {
         display: block !important;
     }
+    
 }
