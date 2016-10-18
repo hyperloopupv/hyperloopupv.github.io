@@ -11,6 +11,8 @@
     <meta property="og:image" content="http://hyperloopupv.com/img/levitation.jpg">
     <link href="img/favicon.png" rel="shortcut icon" type="image/png">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" />
 </head>
 <body>
     
@@ -44,12 +46,79 @@
         </div>
     </section>
     
+    <section class="awards">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <h2>Awards</h2>
+                    <p>SpaceX's Hyperloop Design Weekend</p>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <div class="award-icon">
+                        <img src="img/trophy.png" class="img-responsive center-block">
+                    </div>
+                    <h2>Top Design Concept</h2>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <div class="award-icon">
+                        <img src="img/tools.png" class="img-responsive center-block">
+                    </div>
+                    <h2>Propulsion/Compression Subsystem Technical Excellent</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="sponsor-slide">
+        
+        <div class="container">
+            <div class="row middle-md">
+                <div class="col-xs-12">
+                    
+                    <div class="sponsor-slide">
+                        <div class="sponsor-slide-item">
+                            <img src="img/partners/premium/upv.png" class="img-responsive center-block">
+                        </div>
+                        <div class="sponsor-slide-item">
+                            <img src="img/partners/premium/nagares.png" class="img-responsive center-block">
+                        </div>
+                        <div class="sponsor-slide-item">
+                            <img src="img/partners/silver/istobal.png" class="img-responsive center-block">
+                        </div>
+                        <div class="sponsor-slide-item">
+                            <img src="img/partners/bronze/nationalinstruments.png" class="img-responsive center-block">
+                        </div>
+                        <div class="sponsor-slide-item">
+                            <img src="img/partners/bronze/jesiva.png" class="img-responsive center-block">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
     <section class="tour"></section>
     
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
     <script type="text/javascript" src="assets/js/all.js"></script>
-    
+    <script>
+        $(document).ready(function() {
+            $(".sponsor-slide").owlCarousel({
+                autoPlay: 2500,
+                stopOnHover: true,
+                items: 3,
+                itemsDesktop: [1199, 3],
+                itemsTabletSmall: [768, 2],
+                itemsMobile: [480, 2],
+                pagination: false,
+                navigation: false
+            });
+        });
+    </script>
     
 </body>
 </html>
