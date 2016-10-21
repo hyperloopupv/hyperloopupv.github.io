@@ -23,14 +23,6 @@
 }
 
 .navbar img {
-    padding: 0;
-    max-height: 60%;
-    position: absolute;  
-    top: 0;  
-    bottom: 0;
-    left: 0;
-    padding-left: 5vw;
-    margin: auto;  
 }
 
 .navbar ul {
@@ -61,10 +53,18 @@
     color: #fff;
 }
 
+.logo {
+    float: left;
+    position: relative;
+    display: inline-block !important;
+    height: 60px;
+    padding-top: 10px;
+}
+
 .menu {
     float: right;
     position: relative;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     width: 2rem;
     height: 2rem;
     display: none;
@@ -87,39 +87,39 @@
 }
 
 @media only screen and (max-width : 992px) {
-    
+
     .navbar {
         padding-left:2%;
         padding-right:2%;
     }
-    
+
     .navbar ul li {
         padding-left:2vw;
     }
-    
+
 }
 
 @media only screen and (max-width : 920px) {
-    
+
     .navbar {
         text-align: center;
     }
-    
+
     .links, .links ul {
         display: none;
         -webkit-transition: all 0.4s ease;
         transition: all 0.4s ease;
     }
-    
+
     .navbar h1 {
         float: left;
         display: inline-block;
     }
-    
+
     .menu {
         display: inline-block !important;
     }
-    
+
     .menu:hover {
         cursor: pointer;
     }
@@ -128,7 +128,7 @@
         height: auto !important;
 
     }
-    
+
     .open ul {
         float: none !important;
     }
@@ -140,5 +140,9 @@
     .open > .links, .open > .links ul {
         display: block !important;
     }
+
+}
+
+@media only screen and (max-width : 465px) {
     
 }

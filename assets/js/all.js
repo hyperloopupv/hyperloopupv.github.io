@@ -6,4 +6,12 @@ $(document).ready(function () {
             $(".navbar.scroll.move").removeClass("move");
         }
     });
+    
+    $(".menu").on( "click", function() {
+        if ($(".navbar").hasClass("open")) {
+           $(".navbar").removeClass("open");
+        } else {
+            $(".navbar").addClass("open");
+        }
+    });
 });
