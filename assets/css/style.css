@@ -54,6 +54,12 @@ body {
     margin-right: auto
 }
 
+@media (min-width: 992px) {
+    .col-md-offset-1-and-half {
+        margin-left: 12.499999995%;
+    }
+}
+
 
 /************************* SINGLE PAGE *************************/
 
