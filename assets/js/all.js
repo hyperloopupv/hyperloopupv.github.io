@@ -7,9 +7,18 @@ $(document).ready(function () {
         }
     });
     
-    $(".menu").on( "click", function() {
+
+    $(window).resize(function () {
+        if ($(window).height() < 920) {
+            $(".navbar.scroll").addClass("move");
+        } else {
+            $(".navbar.scroll.move").removeClass("move");
+        }
+    });
+    
+    $(".menu").on("click", function () {
         if ($(".navbar").hasClass("open")) {
-           $(".navbar").removeClass("open");
+            $(".navbar").removeClass("open");
         } else {
             $(".navbar").addClass("open");
         }

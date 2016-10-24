@@ -3,7 +3,6 @@
 .navbar {
     position: fixed;
     z-index: 100;
-    /*line-height: 5rem;*/
     top: 0;
     left: 0;
     right: 0;
@@ -25,7 +24,6 @@
 .logo {
     display: table-cell;
     vertical-align: middle;
-    height: 75px;
     
     -webkit-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
     -moz-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
@@ -35,6 +33,12 @@
 }
 .logo img {
     vertical-align: middle;
+
+    -webkit-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -moz-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -o-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -ms-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
 }
 
 .navbar ul {
@@ -53,21 +57,20 @@
 .navbar a {
     text-decoration: none;
     letter-spacing: 2px;
-    font-weight: 300;
+    font-weight: 400;
     height: 75px;
     line-height: 75px;
     text-transform: uppercase;
     box-sizing: border-box;
     font-family: "Open Sans", arial, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     color: rgba(255,255,255, .7);
     
-    -webkit-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-    -moz-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -webkit-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);  
+    -moz-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000); 
     -o-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-    -ms-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -ms-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000); 
     transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-
 }
 
 .navbar a:hover {
@@ -77,7 +80,7 @@
 .menu {
     float: right;
     position: relative;
-    margin-top: 1.2rem;
+    margin-top: 0.5rem;
     width: 2rem;
     height: 2rem;
     display: none;
@@ -97,6 +100,25 @@
 
 .move {
     background-color: #000;
+    height: 55px;
+}
+
+.move a {
+    line-height: 55px!important;
+    height: 55px;
+}
+
+.move .logo img {
+    height: 35px!important;
+}
+
+.static {
+    position: absolute;
+    background-color: #000;
+}
+
+.static .menu {
+    margin-top: 1.4rem;
 }
 
 @media only screen and (max-width : 992px) {
