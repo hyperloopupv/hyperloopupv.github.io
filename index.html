@@ -55,7 +55,7 @@
 
     <section class="concept">
         <div class="container">
-          <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="col-sm-12 col-md-12 col-lg-12">
                   <h2 class="alt-features-title text-center">The idea</h2>
                   <div class="alt-features-descr">
                     <p class=  text-center>
@@ -70,7 +70,7 @@
 
             <div class="row">
 
-                <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="col-sm-6 col-md-4 col-lg-4 wow fadeIn" data-wow-delay="0.1s" data-wow-duration="2s">
                     <div class="alt-features-item">
                         <div class="alt-features-icon">
                             <span class="icon-layers"></span>
@@ -82,7 +82,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="col-sm-6 col-md-4 col-lg-4 wow fadeIn" data-wow-delay="0.2s" data-wow-duration="2s">
                     <div class="alt-features-item">
                         <div class="alt-features-icon">
                             <span class="icon-gears"></span>
@@ -94,7 +94,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="col-sm-6 col-md-4 col-lg-4 wow fadeIn" data-wow-delay="0.3s" data-wow-duration="2s">
                     <div class="alt-features-item">
                         <div class="alt-features-icon">
                             <span class="icon-tools"></span>
@@ -114,20 +114,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-4">
-                    <h2>Awards</h2>
-                    <p>SpaceX's Hyperloop Design Weekend</p>
+                    <h2 class="font-alt">Awards</h2>
+                    <p class="alt-features-descr">SpaceX's Hyperloop Design Weekend</p>
                 </div>
                 <div class="col-xs-4 text-center">
                     <div class="award-icon">
                         <img src="img/trophy.png" class="img-responsive center-block">
                     </div>
-                    <h2>Top Design Concept</h2>
+                    <h2 class="alt-features-title font-alt">Top Design Concept</h2>
                 </div>
                 <div class="col-xs-4 text-center">
                     <div class="award-icon">
                         <img src="img/tools.png" class="img-responsive center-block">
                     </div>
-                    <h2>Propulsion/Compression Subsystem Technical Excellence</h2>
+                    <h2 class="alt-features-title font-alt">Propulsion/Compression Subsystem Technical Excellence</h2>
                 </div>
             </div>
         </div>
@@ -166,7 +166,7 @@
     <footer>
         <div class="container">
 
-            <div class="local-scroll">
+            <div class="local-scroll wow fadeInUp" data-wow-duration="1.2s" >
                 <img src="img/favicon.png" width="78" height="78" alt="">
             </div>
 
@@ -193,6 +193,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
     <script type="text/javascript" src="assets/js/all.js"></script>
     <script>
         $(document).ready(function () {
@@ -206,6 +207,7 @@
                 pagination: false,
                 navigation: false
             });
+            new WOW().init();
         });
     </script>
 

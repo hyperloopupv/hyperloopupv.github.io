@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     $(window).scroll(function () {
         if ($(window).scrollTop() > 10) {
             $(".navbar.scroll").addClass("move");
@@ -6,10 +7,9 @@ $(document).ready(function () {
             $(".navbar.scroll.move").removeClass("move");
         }
     });
-    
 
     $(window).resize(function () {
-        if ($(window).height() < 920) {
+        if ($(window).width() < 920) {
             $(".navbar.scroll").addClass("move");
         } else {
             $(".navbar.scroll.move").removeClass("move");
@@ -23,4 +23,5 @@ $(document).ready(function () {
             $(".navbar").addClass("open");
         }
     });
+    
 });
