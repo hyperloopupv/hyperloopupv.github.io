@@ -9,15 +9,19 @@
     <meta property="og:title" content="Hyperloop UPV">
     <meta property="og:description" content="A levitating rail-free pod design for SpaceX's Hyperloop Global Competition by Makers UPV">
     <meta property="og:image" content="http://hyperloopupv.com/img/levitation.jpg">
-    <link href="img/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="img/favicon.jpg" rel="shortcut icon" type="image/jpg">
     <link href="assets/css/style.css" rel="stylesheet">
     <style>
+        li.hide {
+          list-style-type: none;
+        }
         ul.horizontal {
           list-style-type: none;
           margin: 0;
           padding: 0;
           overflow: hidden;
-          background-color: #000;
+          background: rgba(54, 25, 25, 0);
+
         }
         li.special {
           display: inline;
@@ -25,11 +29,26 @@
         }
         a:-webkit-any-link{
           text-decoration: none;
-          color:none
+          color:none;
         }
         a:link{
           background-color: none;
+          text-decoration: none;
         }
+        a.back-to-top {
+        	display: none;
+        	width: 60px;
+        	height: 60px;
+        	text-indent: -9999px;
+        	position: fixed;
+        	z-index: 999;
+        	right: 20px;
+        	bottom: 20px;
+        	background: #666666 url("img/up-arrow.png") no-repeat center 43%;
+        	-webkit-border-radius: 30px;
+        	-moz-border-radius: 30px;
+        	border-radius: 30px;
+      }
     </style>
 </head>
 
@@ -60,7 +79,7 @@
 
     </nav>
 
-    <header class="background-image" style="background-image: url(img/bg.jpg);">
+    <header class="background-image" style="background-image: url(img/portada_team.png);">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
@@ -77,11 +96,11 @@
                 <li class="special"><a href="#levitation"><font color= white>Levitation</a></li>
                 <li class="special"><a href="#electronics"><font color= white>Electronics</a></li>
                 <li class="special"><a href="#dynamics"><font color= white>Dynamics</a></li>
-                <li class="special"><a href="#security"><font color= white>Security &amp Energy</a></li>
+                <li class="special"><a href="#security"><font color= white>Security & Energy</a></li>
                 <li class="special"><a href="#economics"><font color= white>Economics</a></li>
                 <li class="special"><a href="#sponsor"><font color= white>Sponsor</a></li>
                 <li class="special"><a href="#communication"><font color= white>Communication</a></li>
-                <li class="special"><a href="#design"><font color= white>Design &amp Media</a></li>
+                <li class="special"><a href="#design"><font color= white>Design & Media</a></li>
                 <li class="special"><a href="#web"><font color= white>Web</a></li>
                   <li class="special"><a href="#professors"><font color= white>Professors</a></li>
               </ul>
@@ -92,11 +111,10 @@
 
     <!--TEAM-->
     <div id="team-info">
+    <a href="#" class="back-to-top">Back to Top</a>
 
-
-      <div id="team-photos">
+      <div id="team-photos" class="container-relative">
         <!--ORGANIZED BY TEAMS-->
-        <section id="team">
         <!--SUB SECTION TITLE-->
         <div class="container">
             <div class="row">
@@ -112,7 +130,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Daniel_Orient.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -131,7 +149,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/David_Pistoni.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -150,7 +168,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Ger_Torres.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -169,7 +187,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Juan_Vicen.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -197,7 +215,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Manuel_Martinez.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -216,7 +234,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Chai.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -245,7 +263,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Rafa.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -264,7 +282,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Miguel_Angel_Parrenyo.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -283,7 +301,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/temp.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -302,7 +320,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Pablo_Hernando.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -318,10 +336,10 @@
                 <!--END TEAM MEMBER ELEMENT-->
 
                 <!--TEAM MEMEBER ELEMENT-->
-                <div class="col-md-3 col-md-offset-1-and-half">
+                <div class="col-md-3 col-md-offset-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Alberto_Tamarit.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -340,7 +358,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Miguel_Rueda.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -355,26 +373,6 @@
                 </div>
                 <!--END TEAM MEMBER ELEMENT-->
 
-                <!--TEAM MEMEBER ELEMENT-->
-                <div class="col-md-3">
-                    <div class="team-item">
-                        <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
-                            <div class="team-item-detail">
-                                <div class="team-social-links">
-                                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-descr font-alt">
-                            <div class="team-item-name">Alejandro Arpa Garzarán</div>
-                            <div class="team-item-role">Collaborator</div>
-                        </div>
-                    </div>
-                </div>
-                <!--END TEAM MEMBER ELEMENT-->
-
-
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 text-center">
@@ -385,29 +383,10 @@
                 <a name="propulsion"></a>
 
                 <!--TEAM MEMEBER ELEMENT-->
-                <div class="col-md-3">
+                <div class="col-md-3 col-md-offset-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
-                            <div class="team-item-detail">
-                                <div class="team-social-links">
-                                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-descr font-alt">
-                            <div class="team-item-name">Chaitanya Patil</div>
-                            <div class="team-item-role">Manager</div>
-                        </div>
-                    </div>
-                </div>
-                <!--END TEAM MEMBER ELEMENT-->
-
-                <!--TEAM MEMEBER ELEMENT-->
-                <div class="col-md-3">
-                    <div class="team-item">
-                        <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Salva.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -426,7 +405,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Francisco.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -441,26 +420,6 @@
                 </div>
                 <!--END TEAM MEMBER ELEMENT-->
 
-                <!--TEAM MEMEBER ELEMENT-->
-                <div class="col-md-3">
-                    <div class="team-item">
-                        <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
-                            <div class="team-item-detail">
-                                <div class="team-social-links">
-                                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-descr font-alt">
-                            <div class="team-item-name">Munther Odeh</div>
-                            <div class="team-item-role">Collaborator</div>
-                        </div>
-                    </div>
-                </div>
-                <!--END TEAM MEMBER ELEMENT-->
-
-
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 text-center">
@@ -470,30 +429,12 @@
                 </div>
                 <a name="levitation"></a>
 
-                <!--TEAM MEMEBER ELEMENT-->
-                <div class="col-md-3 col-md-offset-1-and-half">
-                    <div class="team-item">
-                        <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
-                            <div class="team-item-detail">
-                                <div class="team-social-links">
-                                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-descr font-alt">
-                            <div class="team-item-name">Daniel Orient</div>
-                            <div class="team-item-role">Manager</div>
-                        </div>
-                    </div>
-                </div>
-                <!--END TEAM MEMBER ELEMENT-->
 
                 <!--TEAM MEMEBER ELEMENT-->
-                <div class="col-md-3">
+                <div class="col-md-3 col-md-offset-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Federico_Lluesma.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -512,7 +453,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Ivan_Torres.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -543,7 +484,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Jaime_Laborda.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -562,7 +503,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Jose_Felix.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -579,7 +520,7 @@
 
                 <div class="col-md-3"></div>
 
-
+                <a name="dynamics"></a>
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 text-center">
@@ -587,13 +528,13 @@
                         </div>
                     </div>
                 </div
-                  <a name="dynamics"></a>
+
 
                 <!--TEAM MEMEBER ELEMENT-->
                 <div class="col-md-3 col-md-offset-1-and-half">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Ferran_Quiles.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -612,7 +553,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/temp.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -631,7 +572,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Xavier_Portilla.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -665,7 +606,7 @@
                 <div class="col-md-3 col-md-offset-1-and-half">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Verdu.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -684,7 +625,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Javi_Arroyo.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -709,11 +650,13 @@
                 </div>
                 <a name="economics"></a>
 
+                <div class="col-md-offset-1-and-half"></div>
+
                 <!--TEAM MEMEBER ELEMENT-->
-                <div class="col-md-3 col-md-offset-1-and-half">
+                <div class="col-md-3 col-md-offset-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Galtier.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -728,45 +671,6 @@
                 </div>
                 <!--END TEAM MEMBER ELEMENT-->
 
-                <!--TEAM MEMEBER ELEMENT-->
-                <div class="col-md-3">
-                    <div class="team-item">
-                        <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
-                            <div class="team-item-detail">
-                                <div class="team-social-links">
-                                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-descr font-alt">
-                            <div class="team-item-name">Pablo Fernández Guillen</div>
-                            <div class="team-item-role">Collaborator</div>
-                        </div>
-                    </div>
-                </div>
-                <!--END TEAM MEMBER ELEMENT-->
-
-                <!--TEAM MEMEBER ELEMENT-->
-                <div class="col-md-3">
-                    <div class="team-item">
-                        <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
-                            <div class="team-item-detail">
-                                <div class="team-social-links">
-                                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-descr font-alt">
-                            <div class="team-item-name">Marc Rovira</div>
-                            <div class="team-item-role">Collaborator</div>
-                        </div>
-                    </div>
-                </div>
-                <!--END TEAM MEMBER ELEMENT-->
-
-
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 text-center">
@@ -776,30 +680,12 @@
                 </div>
                 <a name="sponsor"></a>
 
-                <!--TEAM MEMEBER ELEMENT-->
-                <div class="col-md-3">
-                    <div class="team-item">
-                        <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
-                            <div class="team-item-detail">
-                                <div class="team-social-links">
-                                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-descr font-alt">
-                            <div class="team-item-name">Juan Vicén</div>
-                            <div class="team-item-role">Manager</div>
-                        </div>
-                    </div>
-                </div>
-                <!--END TEAM MEMBER ELEMENT-->
 
                 <!--TEAM MEMEBER ELEMENT-->
-                <div class="col-md-3">
+                <div class="col-md-3 col-md-offset-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Francisco.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -818,7 +704,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Javi_Arroyo.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -833,60 +719,22 @@
                 </div>
                 <!--END TEAM MEMBER ELEMENT-->
 
-                <!--TEAM MEMEBER ELEMENT-->
-                <div class="col-md-3">
-                    <div class="team-item">
-                        <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
-                            <div class="team-item-detail">
-                                <div class="team-social-links">
-                                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-descr font-alt">
-                            <div class="team-item-name">Nour Sánchez Abad</div>
-                            <div class="team-item-role">Collaborator</div>
-                        </div>
-                    </div>
-                </div>
-                <!--END TEAM MEMBER ELEMENT-->
-
-
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 text-center">
-                            <h2>Communication &amp Social Networks</h2>
+                            <h2>Communication & Social Networks</h2>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3"></div>
                 <a name="communication"></a>
 
+                <div class"col-md-3 "></div>
                 <!--TEAM MEMEBER ELEMENT-->
-                <div class="col-md-3">
+                <div class="col-md-3 col-md-offset-1-and-half">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
-                            <div class="team-item-detail">
-                                <div class="team-social-links">
-                                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-descr font-alt">
-                            <div class="team-item-name">Juan Vicén</div>
-                            <div class="team-item-role">Manager</div>
-                        </div>
-                    </div>
-                </div>
-                <!--END TEAM MEMBER ELEMENT-->
-
-                <!--TEAM MEMEBER ELEMENT-->
-                <div class="col-md-3">
-                    <div class="team-item">
-                        <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Rober.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -907,7 +755,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 text-center">
-                            <h2>Design &amp Media</h2>
+                            <h2>Design & Media</h2>
                         </div>
                     </div>
                 </div>
@@ -917,7 +765,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Victor.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -936,7 +784,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Mei.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -955,7 +803,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/temp.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -974,7 +822,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Alfonso.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -983,7 +831,7 @@
                         </div>
                         <div class="team-item-descr font-alt">
                             <div class="team-item-name">Alfonso Reyes</div>
-                            <div class="team-item-role">Concepts &amp Sketches</div>
+                            <div class="team-item-role">Concepts & Sketches</div>
                         </div>
                     </div>
                 </div>
@@ -993,7 +841,7 @@
                 <div class="col-md-3 col-md-offset-1-and-half">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/temp.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -1012,7 +860,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/temp.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -1031,7 +879,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Miguel_Rueda.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -1055,30 +903,12 @@
                     </div>
                 </div>
                 <a name="web"></a>
+                  <div class="col-md-3"></div>
                 <!--TEAM MEMEBER ELEMENT-->
                 <div class="col-md-3 col-md-offset-1-and-half">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
-                            <div class="team-item-detail">
-                                <div class="team-social-links">
-                                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-descr font-alt">
-                            <div class="team-item-name">Manuel Martínez</div>
-                            <div class="team-item-role">Webmaster</div>
-                        </div>
-                    </div>
-                </div>
-                <!--END TEAM MEMBER ELEMENT-->
-
-                <!--TEAM MEMEBER ELEMENT-->
-                <div class="col-md-3">
-                    <div class="team-item">
-                        <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/temp.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -1088,25 +918,6 @@
                         <div class="team-item-descr font-alt">
                             <div class="team-item-name">Sergi Ávila</div>
                             <div class="team-item-role">Programmer</div>
-                        </div>
-                    </div>
-                </div>
-                <!--END TEAM MEMBER ELEMENT-->
-
-                <!--TEAM MEMEBER ELEMENT-->
-                <div class="col-md-3">
-                    <div class="team-item">
-                        <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
-                            <div class="team-item-detail">
-                                <div class="team-social-links">
-                                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item-descr font-alt">
-                            <div class="team-item-name">Ramón Gimeno</div>
-                            <div class="team-item-role">Collaborator</div>
                         </div>
                     </div>
                 </div>
@@ -1125,7 +936,7 @@
                 <div class="col-md-3 col-md-offset-1-and-half">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/VD.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -1143,7 +954,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Colin_Dooley.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -1161,7 +972,7 @@
                 <div class="col-md-3">
                     <div class="team-item">
                         <div class="team-item-image">
-                            <img src="img/team/jv.png" alt="">
+                            <img src="img/team/Carlos_Ricolfe.jpg" alt="">
                             <div class="team-item-detail">
                                 <div class="team-social-links">
                                     <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -1175,6 +986,34 @@
                     </div>
                 </div>
                 <!--END TEAM MEMBER ELEMENT-->
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <h2>Collaborators</h2>
+                        </div>
+                    </div>
+                </div>
+                <a name="web"></a>
+                <div class="col-md-3 team-item-descr font-alt team-item-name col-md-offset-1-and-half">
+                  <ul>
+                    <li class="hide">Alejandro Arpa Garzarán</li>
+                    <li class="hide">Munther Odeh</li>
+
+                  </ul>
+                </div>
+                <div class="col-md-3 team-item-descr font-alt team-item-name">
+                  <ul>
+                    <li class="hide">Nour Sánchez Abad</li>
+                    <li class="hide">Ramón Gimeno</li>
+                  </ul>
+                </div>
+                <div class="col-md-3 team-item-descr font-alt team-item-name">
+                  <ul>
+                    <li class="hide">Marc Rovira</li>
+                    <li class="hide">Ana Sarrión Jímenez</li>
+                  </ul>
+                </div>
 
 
             <!--PHOTO ELEMENT END-->
@@ -1215,6 +1054,25 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
     <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.js"></script>
     <script type="text/javascript" src="assets/js/all.js"></script>
+    <script>
+    var amountScrolled = 300;
+
+    $(window).scroll(function() {
+    	if ( $(window).scrollTop() > amountScrolled ) {
+    		$('a.back-to-top').fadeIn('slow');
+    	} else {
+    		$('a.back-to-top').fadeOut('slow');
+    	}
+    });
+  </script>
+  <script>
+  $('a.back-to-top').click(function() {
+  	$('html, body').animate({
+  		scrollTop: 0
+  	}, 700);
+  	return false;
+  });
+  </script>
 
     <script>
       $(function() {
@@ -1232,5 +1090,10 @@
       });
       });
     </script>
+
+    <script type="text/javascript">
+	    $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+    </script>
+
 </body>
 </html>
