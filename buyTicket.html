@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HyperloopUPV - About Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A levitating rail-free pod design for SpaceX's Hyperloop Global Competition by Makers UPV">
+    <meta property="og:url" content="http://hyperloopupv.com">
+    <meta property="og:title" content="Hyperloop UPV">
+    <meta property="og:description" content="A levitating rail-free pod design for SpaceX's Hyperloop Global Competition by Makers UPV">
+    <meta property="og:image" content="http://hyperloopupv.com/img/levitation.jpg">
+    <link href="img/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+        html, body {
+          height: 100%;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          font: 18px;
+          background-color: #2C2C2C;
+          overflow:hidden;
+          }
+
+          #fullDiv {
+          position: inline;
+          margin: 0;
+          padding: 30px;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          overflow: hidden;
+          }
+
+          .calendar ul {
+          margin: 0;
+          padding: 0;
+          font-size: 30px;
+          color: rgba(59,102,134,1);
+          }
+
+          .calendar li {
+          float: left;
+          display: block;
+          width: 13.9%;
+          text-align: center;
+          list-style-type: none;
+          box-sizing: border-box;
+          border: 2px solid #999999;
+          margin: 3px;
+          font-size: 30px;
+          }
+        .calendar li:nth-child(n+1):nth-child(-n+7) {
+          font-size: 16px;
+          text-align: left;
+          color: rgba(255,255,255, .7);
+          border-style: none;
+        }
+
+        .calendar li:nth-child(n+39), li:nth-child(n+8):nth-child(-n+16) {
+          font-weight: 900;
+          color: rgba(0,0,0,.3);
+        }
+
+        .calendar li:hover:nth-child(n+8):nth-child(-n+38), li:nth-child(17){
+          border-radius: 0px;
+          background-color: #3B6686;
+          color: #ecf0f1;
+        }
+        .inf-panel div{
+          padding-left:30px;
+          color: rgba(255,255,255, .7);
+        }
+        .top-panel div{
+          padding-left:30px;
+          padding-top:0px;
+          color: rgba(255,255,255, .7);
+        }
+        .bottom-panel div{
+          padding-left:30px;
+          color: rgba(59, 102, 134, 1);
+          font-size:40px;
+        }
+        .enjoy-css {
+          -webkit-box-sizing: content-box;
+          -moz-box-sizing: content-box;
+          box-sizing: content-box;
+          width: 75px;
+          height: 28px;
+          cursor: pointer;
+          margin: 0px;
+          border: 2px solid rgb(59,102,134);
+          -webkit-border-radius: 10px;
+          border-radius: 40px;
+          font: normal 20px "Advent Pro", Helvetica, sans-serif;
+          color: rgb(59,102,134);
+          text-align: left;
+          -o-text-overflow: clip;
+          text-overflow: clip;
+          letter-spacing: 1px;
+          background: rgba(0,0,0,0);
+          -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+          -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+          -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+          transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+        }
+        .enjoy-css:hover {
+          color: rgba(255,255,255,1);
+          background: rgb(59,102,134);
+        }
+        .enjoy-css:active {
+          border: 2px solid rgba(47, 80, 105,1);
+          background: rgba(47, 80, 105,1);
+          -webkit-transition: none;
+          -moz-transition: none;
+          -o-transition: none;
+          transition: none;
+        }
+        .highlight { background-color: #869AA9; }
+    </style>
+</head>
+<body>
+    <nav class="navbar static">
+
+        <div class="nav-logo">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png">
+            </a>
+        </div>
+
+        <div class="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="links">
+            <ul>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="systems.html">Systems</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="buyTicket.html">Buy Ticket</a></li>
+            </ul>
+        </div>
+
+    </nav>
+      <section>
+        <div id= "information" style="position" >
+          <br><br><br><br>
+          <div class="inf-panel">
+          <div class="row">
+              <div class="col-md-2">
+                <p>This is for informational purposes only.
+                  This should not be taken seriously.</p>
+              </div>
+              <div class="col-md-2">
+              </div>
+              <div class="col-md-2">
+              </div>
+              <div class="col-md-2"></div>
+              <div class="col-md-2">
+                Pods on time +-5s. Pods arrive every 5 minutes.
+              </div>
+              <div class="col-md-2">
+                <img src="img/booking_logo.png" height="80" width="80">
+              </div>
+              <div class="col-md-2"></div>
+          </div>
+        </div>
+
+          <!--INFORMATION PANE-->
+          <div class="top-panel">
+          <div class="row">
+              <div class="col-md-2">
+                Date:
+              </div>
+              <div class="col-md-2">
+                Departure City:
+              </div>
+              <div class="col-md-2">
+                Departure Time:
+              </div>
+              <div class="col-md-2">
+                Destination:
+              </div>
+              <div class="col-md-2">
+                Price:
+              </div>
+              <div class="col-md-2">
+                <div class="enjoy-css" id="btnClickNext">Next</div>
+              </div>
+          </div>
+        </div>
+        <div class="bottom-panel">
+        <div class="row">
+            <div class="col-md-2">
+              10 December
+            </div>
+            <div class="col-md-2">
+              Madrid
+            </div>
+            <div class="col-md-2">
+              8:00AM
+            </div>
+            <div class="col-md-2">
+              Paris
+            </div>
+            <div class="col-md-2">
+              50 Euros
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+      </div>
+      </div>
+      </section>
+      <hr>
+      <section id="booking">
+            <div class ="calendar">
+              <div id='fullDiv'>
+                <div id='map' style="align:left; margin-left:30px;">
+                  <img src="img/map/map_of_Europe.png" style="height: 559px; width: 1000px; float:left">
+
+                  <div id='routes' style="padding: 20px; float: right; padding-right:350px;">
+                    <table id='route' class="table" style="color: rgb(59,102,134); font-size: 24px; ">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Routes Hyperloop Europe
+                                    <hr>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody style="color: rgba(255,255,255, .7); font-size: 14px;">
+                            <tr>
+                                <td>
+                                    Madrid-Paris
+                                    <div class="small">
+                                        70 Minutes
+                                    </div>
+                                </td>
+                                <td class="align-left">
+                                    $18.00
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    Frankfurt-Rome
+                                    <div class="small">
+                                        50 Minutes
+                                    </div>
+                                </td>
+                                <td class="align-right">
+                                    $24.00
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    London-Paris
+                                    <div class="small">
+                                      58 Minutes
+                                    </div>
+                                </td>
+                                <td class="align-right">
+                                    $26.00
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    Berlin-Paris
+                                    <div class="small">
+                                        66 Minutes
+                                    </div>
+                                </td>
+                                <td class="align-right">
+                                    $25.00
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div id='datePicker' style="display:none;">
+                  <ul>
+                    <li>Sunday</li>
+                    <li>Monday</li>
+                    <li>Tuesday</li>
+                    <li>Wednesday</li>
+                    <li>Thursday</li>
+                    <li>Friday</li>
+                    <li>Saturday</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li>12</li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15</li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li>19</li>
+                    <li>20</li>
+                    <li>21</li>
+                    <li>22</li>
+                    <li>23</li>
+                    <li>24</li>
+                    <li>25</li>
+                    <li>26</li>
+                    <li>27</li>
+                    <li>28</li>
+                    <li>29</li>
+                    <li>30</li>
+                    <li>31</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        <div class="enjoy-css" id="btnBack" style="text-align:center; display:none; padding=10px;">Back</div>
+      </section>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
+    <script type="text/javascript" src="assets/js/all.js"></script>
+
+    <script>
+      var winHeight = $(window).height()*0.50;
+      var height = ( winHeight * 16.6666 ) / 100;
+      var lineHeight = height + "px";
+
+      $("li").css("line-height", lineHeight);
+      $("li").css("height", height);
+
+    </script>
+    <script>
+    $('#map').hide();
+    $("#map").fadeIn("slow");
+
+    $('#btnClickNext').on('click',function(){
+        $('#datePicker').siblings('div').hide();
+          $('#datePicker').fadeIn("slow");
+        $('#btnBack').fadeIn("slow");
+    });
+    $('#btnBack').on('click',function(){
+        $('#map').siblings('div').hide();
+        $("#map").fadeIn("slow");
+        $('#btnBack').hide();
+    });
+    </script>
+
+    <script>
+      $("#route tr").click(function() {
+      var selected = $(this).hasClass("highlight");
+      $("#route tr").removeClass("highlight");
+      if(!selected)
+              $(this).addClass("highlight");
+    });
+    </script>
+
+</body>
+</html>
