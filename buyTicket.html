@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>HyperloopUPV - About Us</title>
+    <title>HyperloopUPV - Buy Ticket</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A levitating rail-free pod design for SpaceX's Hyperloop Global Competition by Makers UPV">
@@ -19,18 +19,11 @@
           padding: 0;
           font: 18px;
           background-color: #2C2C2C;
-          overflow:hidden;
+          overflow:;
           }
 
           #fullDiv {
           position: inline;
-          margin: 0;
-          padding: 30px;
-          left: 0;
-          top: 0;
-          bottom: 0;
-          right: 0;
-          overflow: hidden;
           }
 
           .calendar ul {
@@ -43,7 +36,7 @@
           .calendar li {
           float: left;
           display: block;
-          width: 13.9%;
+          width: 13.5%;
           text-align: center;
           list-style-type: none;
           box-sizing: border-box;
@@ -118,6 +111,24 @@
           transition: none;
         }
         .highlight { background-color: #869AA9; }
+        td:hover, tr:hover{ background-color: rgba(255,255,255,0.2);}
+        .headerTable tr:hover{background-color: rgba(0,0,0,0.0);}
+        td{
+          padding-bottom: 10%;
+          padding-left: 5%;
+          border-bottom-style: groove;
+          border-width: thin;
+
+        }
+        th{
+          padding-left: 4%;
+          text-align: left;
+
+        }
+        .firstTr td{
+          border-top-style: groove;
+        }
+
     </style>
 </head>
 <body>
@@ -151,11 +162,9 @@
           <br><br><br><br>
           <div class="inf-panel">
           <div class="row">
-              <div class="col-md-2">
+              <div class="col-md-4">
                 <p>This is for informational purposes only.
                   This should not be taken seriously.</p>
-              </div>
-              <div class="col-md-2">
               </div>
               <div class="col-md-2">
               </div>
@@ -210,33 +219,32 @@
             <div class="col-md-2">
               50 Euros
             </div>
-            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <div class="enjoy-css" id="btnBack" style="display:none; font-size: 20px; margin-top: 20px;">Back</div>
+            </div>
         </div>
       </div>
       </div>
       </section>
       <hr>
       <section id="booking">
-            <div class ="calendar">
-              <div id='fullDiv'>
-                <div id='map' style="align:left; margin-left:30px;">
-                  <img src="img/map/map_of_Europe.png" style="height: 559px; width: 1000px; float:left">
+        <div id='fullDiv'>
+                <div id='map' style="margin-left:30px;">
+                  <img src="img/map/map_of_Europe.png" style=" width: 60%; float:left">
 
-                  <div id='routes' style="padding: 20px; float: right; padding-right:350px;">
-                    <table id='route' class="table" style="color: rgb(59,102,134); font-size: 24px; ">
-                        <thead>
+                    <table id='route' class="table" style="color: rgb(59,102,134); font-size: 24px; width: 35%">
+                        <thead class="headerTable">
                             <tr>
-                                <th>
+                                <th style="border-style: none;">
                                     Routes Hyperloop Europe
-                                    <hr>
                                 </th>
                             </tr>
                         </thead>
                         <tbody style="color: rgba(255,255,255, .7); font-size: 14px;">
-                            <tr>
+                            <tr class="firstTr">
                                 <td>
                                     Madrid-Paris
-                                    <div class="small">
+                                    <div class="route-chooser">
                                         70 Minutes
                                     </div>
                                 </td>
@@ -248,7 +256,7 @@
                             <tr>
                                 <td>
                                     Frankfurt-Rome
-                                    <div class="small">
+                                    <div class="route-chooser">
                                         50 Minutes
                                     </div>
                                 </td>
@@ -260,7 +268,7 @@
                             <tr>
                                 <td>
                                     London-Paris
-                                    <div class="small">
+                                    <div class="route-chooser">
                                       58 Minutes
                                     </div>
                                 </td>
@@ -272,7 +280,7 @@
                             <tr>
                                 <td>
                                     Berlin-Paris
-                                    <div class="small">
+                                    <div class="route-chooser">
                                         66 Minutes
                                     </div>
                                 </td>
@@ -283,10 +291,9 @@
 
                         </tbody>
                     </table>
-                  </div>
                 </div>
 
-                <div id='datePicker' style="display:none;">
+                  <div id='datePicker' class= "calendar" style="display:none;">
                   <ul>
                     <li>Sunday</li>
                     <li>Monday</li>
@@ -331,10 +338,10 @@
                     <li>3</li>
                     <li>4</li>
                 </ul>
+
             </div>
-          </div>
+
         </div>
-        <div class="enjoy-css" id="btnBack" style="text-align:center; display:none; padding=10px;">Back</div>
       </section>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -355,9 +362,9 @@
     $("#map").fadeIn("slow");
 
     $('#btnClickNext').on('click',function(){
-        $('#datePicker').siblings('div').hide();
-          $('#datePicker').fadeIn("slow");
-        $('#btnBack').fadeIn("slow");
+        $('#map').hide();
+        $('#btnBack').show();
+        $('#datePicker').fadeIn("slow");
     });
     $('#btnBack').on('click',function(){
         $('#map').siblings('div').hide();
