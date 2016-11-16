@@ -12,6 +12,30 @@
     <link href="img/favicon.png" rel="shortcut icon" type="image/png">
     <link href="assets/css/style.css" rel="stylesheet">
     <style>
+        .container{
+        width:100%;
+        height:100%;
+        }
+        .arrow-middle-null, .arrow-left-null, .arrow-right-null {
+          position:inline;
+        }
+
+        svg{
+
+          width:50%;
+          height:50%;
+          max-width:250px;
+          max-height:250px;
+           cursor:pointer;
+        }
+        .outline{
+          opacity:0;
+
+        }
+        .outline-bg{
+          opacity:0.02;
+
+        }
         html, body {
           height: 100%;
           width: 100%;
@@ -78,7 +102,7 @@
           color: rgba(0,0,0,.3);
         }
 
-        .calendar li:hover:nth-child(n+8):nth-child(-n+38), li:nth-child(17){
+        .calendar li:hover:nth-child(n+8):nth-child(-n+38){
           border-radius: 0px;
           background-color: #3B6686;
           color: #ecf0f1;
@@ -226,14 +250,14 @@
         </div>
         <div class="bottom-panel">
         <div class="row">
-            <div class="col-md-2 date">
+            <div class="col-md-2 date" style="line-height: 1">
               --
             </div>
             <div class="col-md-2 origin">
               --
             </div>
             <div class="col-md-2">
-              --
+              ANY
             </div>
             <div class="col-md-2 destination">
               --
@@ -242,7 +266,7 @@
               --
             </div>
             <div class="col-md-2">
-                <div class="enjoy-css" id="btnBack" style="display:none; font-size: 20px; margin-top: 20px; color: rgba(255,255,255, .7);">Reset</div>
+                <div class="enjoy-css" id="btnBack" style="display:none; font-size: 20px; margin-top: 20px; color: rgba(255,255,255, .7);">Back</div>
             </div>
         </div>
       </div>
@@ -316,7 +340,7 @@
                 </div>
 
                   <div id='datePicker' class= "calendar" style="display:none;">
-                  <ul>
+                  <ul id='chooseDate'>
                     <li>Sunday</li>
                     <li>Monday</li>
                     <li>Tuesday</li>
@@ -363,30 +387,38 @@
 
             </div>
             <div id="pickMoreInfo" class="moreInfo" style="display:none">
-              <div class="row" style="height:70%;">
-              <div class="col-md-5">
-                  <ul>
-                    Choose time:
-                    <li class="moreInfo">0.00-12.00</li>
-                  </ul>
+              <div class="row" style="height:70%; padding: 20px;">
+                    <div class="container">
+                       <svg class="loader-svg" version="1.1" width="180px" height="180px" viewBox="0 0 180 180" >
+                      <defs>
+                      <filter id="glow" y="-50%" height="180%">
+                          <feGaussianBlur stdDeviation="2 2" result="coloredBlur"/>
+                          <feMerge>
+                              <feMergeNode in="coloredBlur"/>
+                              <feMergeNode in="SourceGraphic"/>
+                          </feMerge>
+                      </filter>
+                      </defs>
+                      <g class="all-lines">
+                      <path class="outline" fill="none" stroke="#ededed" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M90.5,161C51.6,161,20,129.4,20,90.5S51.6,20,90.5,20S161,51.6,161,90.5S129.4,161,90.5,161"/>
+                      <path class="outline-bg" fill="none" stroke="#ededed" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M90.5,161C51.6,161,20,129.4,20,90.5S51.6,20,90.5,20S161,51.6,161,90.5S129.4,161,90.5,161"/>
+                      <polyline class="arrow-head" fill="none" stroke="#ededed" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+                      	122.5,103 90,135.5 57.5,103 "/>
+                      <line class="arrow-line" fill="none" stroke="#ededed" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="90" y1="52" x2="90" y2="135"/>
+                         </g>
+                      </svg>
+                        <div class="arrow-left-null"></div>
+                        <div class="arrow-middle-null"></div>
+                        <div class="arrow-right-null"></div>
+                    </div>
                 </div>
-                <div class="col-md-2">
-                <ul style="text-align: left; margin-left: 30%; margin-top: 18%;"><br><br>OR</ul>
-              </div>
-                <div class="col-md-5">
-                    <ul>
-                      <br>
-                      <li class="moreInfo">12.00-24.00</li>
-                    </ul>
-                  </div>
-                </div>
-            </div>
         </div>
       </section>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
     <script type="text/javascript" src="assets/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 
     <script>
       var winHeight = $(window).height()*0.50;
@@ -415,15 +447,11 @@
 
     });
     $('#btnBack').on('click',function(){
-      if(!calendarPage){
-        $('#pickMoreInfo').hide();
-        $('#datePicker').fadeIn();
-        calendarPage = true;
-      }
         $('#map').siblings('div').hide();
         $("#map").fadeIn("slow");
         $('#btnBack').hide();
         calendarPage = false;
+
     });
     </script>
 
@@ -446,7 +474,6 @@
               };
           }
       }
-
       function tableText(tableCell) {
           if(tableCell.innerHTML.indexOf("Valencia") !== -1){
             //CHANGE ATTRIBUTES
@@ -473,9 +500,193 @@
             $(".price").html('25 Euros');
             $(".mapImg").attr("src","img/map/map_Zur-Rom.png");
           }
-
       }
     </script>
+    <script>
+      $('#chooseDate li').click(function(){
+        var temp = $(this).text();
+        $('.date').html(temp + ' November');
+      });
 
+    </script>
+    <script>
+
+    var loaderSVG = document.querySelector('.loader-svg');
+    var container = document.querySelector('.container');
+    var arrowMiddleNull = document.querySelector('.arrow-middle-null');
+    var arrowRightNull = document.querySelector('.arrow-right-null');
+    var arrowLeftNull = document.querySelector('.arrow-left-null');
+    var arrowHead = document.querySelector('.arrow-head');
+    var arrowLine = document.querySelector('.arrow-line');
+    var outline = document.querySelector('.outline');
+    var outlineBg = document.querySelector('.outline-bg');
+    var allLines = document.querySelector('.all-lines');
+    var isDevice = (/android|webos|iphone|ipad|ipod|blackberry/i.test(navigator.userAgent.toLowerCase()));
+
+    TweenMax.set([container,'svg'], {
+    position:'absolute',
+    top:'50%',
+    left:'50%',
+    xPercent:-50,
+    yPercent:-50
+    });
+    if(!isDevice){
+
+    TweenMax.set(allLines, {
+      filter:'url(#glow)'
+    })
+    }
+    TweenMax.set(arrowLeftNull, {
+    x:57.5,
+    y:103
+    })
+
+    TweenMax.set(arrowMiddleNull, {
+    x:90,
+    y:135.5
+    })
+    TweenMax.set(arrowRightNull, {
+    x:122.5,
+    y:103
+    })
+
+    var tl = new TimelineMax({paused:true, onUpdate:updateSVG});
+
+    tl.set(outline, {
+    alpha:0
+    })
+    .set(outline, {
+    drawSVG:'49.8% 49.9%'
+    })
+    .to(arrowLine, 0.6,{
+    drawSVG:'59% 60%',
+    ease:Power3.easeInOut
+    })
+
+    .to(arrowMiddleNull, 0.6, {
+    y:103,
+    ease:Elastic.easeOut
+    })
+
+    .to(arrowLine, 0.5, {
+      y:'-=95',
+    ease:Power1.easeOut
+    }, '-=0.55')
+
+    .to(arrowLine, 0.2, {
+      y:'+=17',
+    ease:Power1.easeIn
+    })
+    .set(arrowLine, {
+    alpha:0
+    })
+    .set(outline, {
+    alpha:1
+    })
+
+    .to(outline, 3, {
+    drawSVG:'0% 100%',
+    ease:Linear.easeNone
+    })
+    //shrinks the line
+    .to(arrowLeftNull, 3, {
+    x:'+=32.5',
+    ease:Linear.easeNone
+    }, '-=3')
+    .to(arrowRightNull, 3, {
+    x:'-=32.5',
+    ease:Linear.easeNone
+    }, '-=3')
+
+    .to(arrowLeftNull, 0.6, {
+    x:'-=30',
+    y:'-=5',
+    delay:0.4,
+    ease:Back.easeOut
+    })
+    .to(arrowMiddleNull, 0.6, {
+    y:'+=15',
+    ease:Back.easeOut
+    }, '-=0.6')
+    .to(arrowRightNull, 0.6, {
+    x:'+=32.5',
+    y:'-=35',
+    ease:Back.easeOut
+    }, '-=0.6')
+
+    .to(arrowHead, 0.6, {
+    stroke:'#2EC26A'
+    }, '-=0.6')
+    .to(outline, 0.5,{
+    drawSVG:'49.8% 49.9%',
+    delay:1
+    })
+
+
+    .set(outline, {
+    alpha:0
+    })
+    .set(arrowLine, {
+    alpha:1
+    })
+
+    .to(arrowLine, 0.3,{
+    y:'+=95',
+    //drawSVG:'0% 100%',
+    ease:Power1.easeIn
+    })
+    .to(arrowLine, 0.6,{
+    y:'-=18',
+    drawSVG:'0% 100%',
+
+    ease:Power2.easeInOut
+    })
+    .to(arrowHead, 0.6, {
+    stroke:'#ededed'
+    }, '-=0.6')
+    .to(arrowLeftNull, 0.6, {
+    x:57.5,
+    y:103,
+    //delay:1,
+    ease:Power3.easeOut
+    }, '-=0.6')
+    .to(arrowMiddleNull, 0.6, {
+    x:90,
+    y:135.5,
+    ease:Power3.easeOut
+    }, '-=0.6')
+    .to(arrowRightNull, 0.6, {
+    x:122.5,
+    y:103,
+    ease:Power3.easeOut
+    }, '-=0.6')
+
+
+
+
+    function updateSVG(){
+    //console.log(arrowMiddleNull._gsTransform.y)
+    var leftX = arrowLeftNull._gsTransform.x;
+    var leftY = arrowLeftNull._gsTransform.y;
+    var middleX = arrowMiddleNull._gsTransform.x;
+    var middleY = arrowMiddleNull._gsTransform.y;
+    var rightX = arrowRightNull._gsTransform.x;
+    var rightY = arrowRightNull._gsTransform.y;
+
+    var pointStr = leftX + ',' + leftY + ' ' + middleX +','+ middleY +' ' + rightX + ', ' + rightY;
+
+    //console.log(pointStr)
+    TweenMax.set(arrowHead, {
+      attr:{
+        points:pointStr
+      }
+    })
+    }
+
+    loaderSVG.onclick = function(){
+
+    tl.restart();
+    }
+    </script>
 </body>
 </html>
