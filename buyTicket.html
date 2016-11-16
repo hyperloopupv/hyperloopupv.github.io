@@ -674,6 +674,13 @@
     var rightY = arrowRightNull._gsTransform.y;
 
     var pointStr = leftX + ',' + leftY + ' ' + middleX +','+ middleY +' ' + rightX + ', ' + rightY;
+    setTimeout(
+  function()
+  {
+    window.location.replace("index.html");
+    //do something special
+  }, 6000);
+
 
     //console.log(pointStr)
     TweenMax.set(arrowHead, {
@@ -686,6 +693,7 @@
     loaderSVG.onclick = function(){
 
     tl.restart();
+
     }
     </script>
 </body>
