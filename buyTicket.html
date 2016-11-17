@@ -90,6 +90,7 @@
           margin: 3px;
           font-size: 30px;
           }
+          .root{var(--numberOfDaysGrayedOut);}
         .calendar li:nth-child(n+1):nth-child(-n+7) {
           font-size: 16px;
           text-align: left;
@@ -278,6 +279,7 @@
           <div id=download class="bottom-panel"style="display:none">
             <!--DOWNLOAD BUTTON, ONLY AFTER CALENDAR-->
             <div class="col-md-12">CLICK BUTTON TO DOWNLOAD!</div>
+
           </div>
         </center>
         <div id='fullDiv'>
@@ -346,7 +348,9 @@
                 </div>
 
                   <div id='datePicker' class= "calendar" style="display:none;">
+                    <div id="month" style="color: rgba(59,102,134,1); font-size:50px;"><b></b></div>
                   <ul id='chooseDate'>
+
                     <li>Sunday</li>
                     <li>Monday</li>
                     <li>Tuesday</li>
@@ -392,7 +396,7 @@
                 </ul>
 
             </div>
-            <div id="pickMoreInfo" class="moreInfo" style="display:none">
+            <div id="pickMoreInfo" class="moreInfo" style="display:none;">
               <div class="row" style="height:70%; padding: 20px;">
                     <div class="container">
                        <svg class="loader-svg" version="1.1" width="180px" height="180px" viewBox="0 0 180 180" >
@@ -515,6 +519,15 @@
         $('.date').html(temp + ' November');
       });
 
+    </script>
+
+    <script>
+    var monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+    ];
+
+    var d = new Date();
+    $('#month').html(monthNames[d.getMonth()]);
     </script>
     <script>
 
