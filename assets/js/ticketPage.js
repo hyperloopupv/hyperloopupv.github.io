@@ -35,6 +35,7 @@ $('#btnClickNext').on('click',function(){
       $('#btnBack').show();
       $('#datePicker').fadeIn("slow");
       calendarPage = true;
+      $('#btnClickNext').addClass("disable");
     }
 
 });
@@ -52,6 +53,15 @@ $('#btnBack').on('click',function(){
   $("#route tr").removeClass("highlight");
   if(!selected)
           $(this).addClass("highlight");
+});
+
+$("#datePicker li").click(function() {
+var selected = $(this).hasClass("activate");
+$("#datePicker li").removeClass("activate");
+$('#btnClickNext').removeClass("disable");
+if(!selected)
+        $(this).addClass("activate");
+        $('#btnClickNext').removeClass("disable");
 });
 
 //Code logic for choosing destination
