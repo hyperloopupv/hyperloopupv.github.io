@@ -139,7 +139,7 @@ body {
 
 .full {
     position: relative;
-    background: rgba(3, 3, 3, .8);
+    background: rgba(3, 3, 3, 0);
     width: 100%;
     height: 100vh;
     max-height: 1080px;
