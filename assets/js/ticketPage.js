@@ -54,7 +54,6 @@ $('#btnBack').on('click',function(){
           $(this).addClass("highlight");
 });
 
-
 //Code logic for choosing destination
   var table = document.getElementById("route");
   if (table != null) {
@@ -65,6 +64,7 @@ $('#btnBack').on('click',function(){
           };
       }
   }
+
   function tableText(tableCell) {
       if(tableCell.innerHTML.indexOf("Valencia") !== -1){
         //CHANGE ATTRIBUTES
