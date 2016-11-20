@@ -12,6 +12,129 @@
     <link href="img/favicon.png" rel="shortcut icon" type="image/png">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/ticketPage.css" rel="stylesheet">
+    <style>
+    section h1{
+      color: #FD9638;
+      font-family: "Open Sans", arial, sans-serif;
+    }
+    form {
+      text-transform: uppercase;
+
+    }
+    form .field {
+      width: 400px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    form .field label {
+      text-transform: uppercase;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      width: 100%;
+      padding: 18px 0;
+      font-size: 1.45em;
+      letter-spacing: 0.075em;
+      -webkit-transition: all 333ms ease-in-out;
+      -moz-transition: all 333ms ease-in-out;
+      -o-transition: all 333ms ease-in-out;
+      -ms-transition: all 333ms ease-in-out;
+      transition: all 333ms ease-in-out;
+    }
+    form .field label + span {
+      font-family: 'SSStandard';
+      opacity: 0;
+      color: white;
+      display: block;
+      position: absolute;
+      top: 12px;
+      left: 7%;
+      font-size: 2.5em;
+      text-shadow: 1px 2px 0 #cd6302;
+      -webkit-transition: all 333ms ease-in-out;
+      -moz-transition: all 333ms ease-in-out;
+      -o-transition: all 333ms ease-in-out;
+      -ms-transition: all 333ms ease-in-out;
+      transition: all 333ms ease-in-out;
+    }
+    form .field input[type="text"],
+    form .field textarea {
+      border: none;
+      background: #E8E9EA;
+      width: 80.5%;
+      margin: 0;
+      padding: 18px 0;
+      padding-left: 19.5%;
+      color: #2c2c2c;
+      font-size: 1.4em;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    form .field input[type="text"]#msg,
+    form .field textarea#msg {
+      height: 18px;
+      resize: none;
+      -webkit-transition: all 333ms ease-in-out;
+      -moz-transition: all 333ms ease-in-out;
+      -o-transition: all 333ms ease-in-out;
+      -ms-transition: all 333ms ease-in-out;
+      transition: all 333ms ease-in-out;
+    }
+    form .field input[type="text"]:focus, form .field input[type="text"].focused,
+    form .field textarea:focus,
+    form .field textarea.focused {
+      outline: none;
+    }
+    form .field input[type="text"]:focus#msg, form .field input[type="text"].focused#msg,
+    form .field textarea:focus#msg,
+    form .field textarea.focused#msg {
+      padding-bottom: 150px;
+    }
+    form .field input[type="text"]:focus + label, form .field input[type="text"].focused + label,
+    form .field textarea:focus + label,
+    form .field textarea.focused + label {
+      width: 18%;
+      background: #FD9638;
+      color: #FFF;
+    }
+    form .field input[type="text"].focused + label,
+    form .field textarea.focused + label {
+      color: #FD9638;
+    }
+    form .field:hover label {
+      width: 18%;
+      background: #FD9638;
+      color: white;
+    }
+    form input[type="submit"] {
+      background: #FD9638;
+      color: white;
+      -webkit-appearance: none;
+      border: none;
+      text-transform: uppercase;
+      position: relative;
+      padding: 13px 50px;
+      font-size: 1.4em;
+      letter-spacing: 0.1em;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      -webkit-transition: all 333ms ease-in-out;
+      -moz-transition: all 333ms ease-in-out;
+      -o-transition: all 333ms ease-in-out;
+      -ms-transition: all 333ms ease-in-out;
+      transition: all 333ms ease-in-out;
+    }
+    form input[type="submit"]:hover {
+      background: #313A3D;
+      color: #FD9638;
+    }
+    form input[type="submit"]:focus {
+      outline: none;
+      background: #cd6302;
+    }
+    </style>
 </head>
 <body>
     <nav class="navbar static">
@@ -39,14 +162,14 @@
         </div>
 
     </nav>
-      <section>
+      <section id="TOP_PANEL">
         <div id= "information" style="position" >
           <br><br><br><br>
           <div class="inf-panel">
           <div class="row">
               <div class="col-md-4">
-                <p>This is for informational purposes only.
-                  This should not be taken seriously.</p>
+                <p>This is for informational purposes (examples of estimated travel time);
+                  it does not constitute an offer to sell tickets.</p>
               </div>
               <div class="col-md-2">
               </div>
@@ -110,17 +233,11 @@
       </section>
       <hr>
       <section id="booking">
-        <center>
-          <div id=download class="bottom-panel"style="display:none; margin-top:250px;">
-            <!--DOWNLOAD BUTTON, ONLY AFTER CALENDAR-->
-            <div class="col-md-12">CLICK BUTTON TO DOWNLOAD TICKET!</div>
-
-          </div>
-        </center>
-        <div id='fullDiv'>
+        <div id='fullDiv' style="margin:10px;">
                 <div id='map' style="margin-left:30px;">
-                  <img src="img/map/map_of_Europe.png" style=" width: 60%; float:left" class="mapImg">
-
+                  <img src="img/map/map_of_Europe.png" style=" width: 50%; float:left" class="mapImg">
+                </div>
+                <div id='routes'>
                     <table id='route' class="table" style="color: rgb(59,102,134); font-size: 24px; width: 35%">
                         <thead class="headerTable">
                             <tr>
@@ -184,6 +301,7 @@
 
                   <div id='datePicker' class= "calendar" style="display:none;">
                     <div id="month" style="color: rgba(59,102,134,1); font-size:50px;"><b></b></div>
+                    <div id="month_info" style="color:#FFFFFF; font-size:16px;">(choose date)</div>
                   <ul id='chooseDate'>
 
                     <li>Sunday</li>
@@ -227,39 +345,250 @@
                 </ul>
 
             </div>
-            <div id="pickMoreInfo" class="moreInfo" style="display:none;">
-              <div class="row" style="height:70%; padding: 20px;">
-                    <div class="container">
-                       <svg class="loader-svg" version="1.1" width="180px" height="180px" viewBox="0 0 180 180" >
-                      <defs>
-                      <filter id="glow" y="-50%" height="180%">
-                          <feGaussianBlur stdDeviation="2 2" result="coloredBlur"/>
-                          <feMerge>
-                              <feMergeNode in="coloredBlur"/>
-                              <feMergeNode in="SourceGraphic"/>
-                          </feMerge>
-                      </filter>
-                      </defs>
-                      <g class="all-lines">
-                      <path class="outline" fill="none" stroke="#ededed" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M90.5,161C51.6,161,20,129.4,20,90.5S51.6,20,90.5,20S161,51.6,161,90.5S129.4,161,90.5,161"/>
-                      <path class="outline-bg" fill="none" stroke="#ededed" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M90.5,161C51.6,161,20,129.4,20,90.5S51.6,20,90.5,20S161,51.6,161,90.5S129.4,161,90.5,161"/>
-                      <polyline class="arrow-head" fill="none" stroke="#ededed" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-                      	122.5,103 90,135.5 57.5,103 "/>
-                      <line class="arrow-line" fill="none" stroke="#ededed" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="90" y1="52" x2="90" y2="135"/>
-                         </g>
-                      </svg>
-                        <div class="arrow-left-null"></div>
-                        <div class="arrow-middle-null"></div>
-                        <div class="arrow-right-null"></div>
-                    </div>
-                </div>
-        </div>
-      </section>
+            <!--CIRCLING LOAD BAR-->
+            <div id="bookTicket" style="display:none">
+              <div class="container">
+                <svg class="lineSVG" version="1.1" x="0px" y="0px" width="900px" height="600px" viewBox="0 0 900 600">
+                <defs>
 
+                <filter id="glow" width="400%" x="-50%" y="-50%" height="200%">
+                    <feGaussianBlur stdDeviation="2 2" result="coloredBlur"/>
+                    <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+                <filter id="heavyGlow" width="400%" x="-50%" y="-50%" height="200%">
+                    <feGaussianBlur stdDeviation="9 9" result="coloredBlur"/>
+                    <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+
+                </defs>
+                <line class="loadLineGhost" fill="none" stroke="#1E1E24" stroke-width="2" stroke-linecap="none" stroke-linejoin="none" stroke-miterlimit="10" x1="100" y1="340" x2="800" y2="340" opacity="0" />
+
+
+
+                <line class="loadLineTip" filter="url(#heavyGlow)" fill="none" stroke="#5CE2ED" stroke-width="2" stroke-linecap="none" stroke-linejoin="none" stroke-miterlimit="10" x1="100" y1="340" x2="800" y2="340" />
+
+                <g class="lineGroup" filter="url(#glow)" >
+                <line class="loadLine" fill="none" stroke="#5CE2ED" stroke-width="2" stroke-linecap="none" stroke-linejoin="none" stroke-miterlimit="10" x1="100" y1="340" x2="800" y2="340" />
+
+                <g class="refreshGroup" >
+
+                <path class="tick" fill="none" stroke="#5CE2ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+                	M53.5,11.4l-24,32.1l-14-9"/>
+
+                		<circle class="refreshCircle" fill="rgba(0,0,0,0)" stroke="#5CE2ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="30" cy="30" r="30"/>
+                </g>
+                  </g>
+
+                </svg>
+                  <div class="downloading">Booking, please wait...</div>
+                  <div class="refresh">Ticket booked!</div>
+                </div>
+            </div>
+            <div id="pickMoreInfo" class="bookingTicket" style="display:none;">
+              <div class="container" id="form">
+                <section id="hire" style="float:right;">
+                  <h1>Booking Information</h1>
+
+                  <form id="book">
+              	      <div class="field name-box">
+              		        <input type="text" id="name" placeholder="Who are you?"/>
+                      		<label for="name">Name</label>
+              	      </div>
+
+                      <div class="field email-box">
+              		        <input type="text" id="email" placeholder="name@email.com"/>
+              		        <label for="email">Email</label>
+              	      </div>
+
+                      <div class="field name-box">
+              		        <input type="text" id="name" placeholder="Age?"/>
+              		        <label for="name">Age</label>
+              	      </div>
+
+              	      <input type="submit"/>
+                </form>
+              </section>
+              </div>
+            </div>
+      </section>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
     <script type="text/javascript" src="assets/js/all.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
     <script type="text/javascript" src="assets/js/ticketPage.js"></script>
+    <script type="text/javascript" src="assets/js/formBooking.js"></script>
+    <script>
+    $('#book').submit(function(){
+      $("#map").hide();
+      $("#pickMoreInfo").hide();
+      $("#bookTicket").fadeIn("slow");
+      //SVG BOOKING ANIMATION
+      var container = document.querySelector('.container');
+      var lineSVG = document.querySelector('.lineSVG');
+      var downloading = document.querySelector('.downloading');
+      var refresh = document.querySelector('.refresh');
+      var loadLine = document.querySelector('.loadLine');
+      var loadLineTip = document.querySelector('.loadLineTip');
+      var loadLineGhost = document.querySelector('.loadLineGhost');
+      var refreshCircle = document.querySelector('.refreshCircle');
+      var tick = document.querySelector('.tick');
+      var refreshGroup = document.querySelector('.refreshGroup');
+      var failAt = 100; //percent
+      var glowTipLengthPercent = 5;
+      var lineStart = Number(loadLine.getAttribute('x1'));
+      var lineEnd = Number(loadLine.getAttribute('x2'));
+      var lineLength =  lineEnd -  lineStart;
+      var failPercent = failAt/100; //percent
+      var refreshCircleRadius = Number(refreshCircle.getAttribute('r'));
+      var refreshCircleRadiusAsPercentOfLine = (refreshCircleRadius/lineLength) * 100;
+
+      TweenMax.set(container, {
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          xPercent: -50,
+          yPercent: -50
+      })
+
+      TweenMax.set([loadLine, loadLineTip], {
+        drawSVG:'-0.5% 0%'
+      })
+
+      TweenMax.set([tick], {
+        drawSVG:'0% 0%',
+        alpha:0
+      })
+      TweenMax.set([refreshCircle], {
+        drawSVG:'0% 0%',
+        alpha:0
+      })
+      TweenMax.set([refreshGroup], {
+        y:310
+      })
+
+      var tl = new TimelineMax({onComplete:playAgain});
+      tl.set(refreshGroup, {
+        alpha:1,
+        x:(failPercent * lineLength) + lineStart - (refreshCircleRadius*2)
+      })
+
+      .to(loadLineGhost, 1,{
+        alpha:0.5
+      })
+      .to([loadLine,], 6, {
+        drawSVG:failAt +'% 0%',
+        ease:SteppedEase.config(40)
+      })
+
+      .to([loadLineTip,], 6, {
+        drawSVG:failAt +'% ' + (failAt - glowTipLengthPercent)+'%',
+        ease:SteppedEase.config(40)
+      },'-=6')
+      .from([loadLine, loadLineTip], 0.1,{
+        immediateRender:false,
+        stroke:'green',
+        repeat:12,
+        yoyo:true
+      })
+
+      .set([ refreshCircle], {
+        alpha:1
+      })
+      .to(loadLineTip, 1, {
+        drawSVG:(failAt)+'% ' + (failAt)+'%'
+      })
+
+
+       .to([ refreshCircle], 1, {
+        drawSVG:'0% 88%'
+      },'-=1')
+      .to([loadLine, loadLineTip], 1, {
+        drawSVG:(failAt)+'% ' + (failAt)+'%'
+      },'-=1')
+      .set([ tick], {
+        alpha:1
+      })
+
+      .to([ tick], 1, {
+        drawSVG:'95% 0%'
+      })
+
+      .to(refreshGroup, 2, {
+        x:(lineLength/2) + (lineStart - (refreshCircleRadius)),
+        rotation:-360,
+        transformOrigin:'50% 50%',
+        ease:Power3.easeInOut
+      }, '-=1')
+      .to([ refreshCircle], 1, {
+        drawSVG:'0% 100%'
+      },'-=2')
+      .to([ tick], 1, {
+        drawSVG:'95% 20%'
+      },'-=2')
+      .set([loadLine, loadLineTip], {
+        alpha:0
+      })
+
+
+
+      .to(loadLineGhost, 2, {
+        alpha:0,
+        ease:Power3.easeInOut
+      }, '-=2')
+      .to(refresh, 0.5, {
+        alpha:1,
+        ease:Power2.easeInOut
+      })
+      .to(downloading, 0.5, {
+        alpha:0,
+        ease:Power2.easeInOut
+      },'-=0.5')
+      .to([downloading, refresh], 0.5, {
+        top:'+=10',
+        ease:Power2.easeInOut
+      }, '-=0.5')
+
+      .addPause()
+
+      .to(refreshGroup,0.3, {
+        alpha:0
+      })
+      .to(refresh, 0.5, {
+        alpha:0,
+        ease:Power2.easeInOut
+      })
+      .to(downloading, 0.5, {
+        alpha:1,
+        ease:Power2.easeInOut
+      },'-=0.5')
+      .to([downloading, refresh], 0.5, {
+        top:'-=10',
+        ease:Power2.easeInOut
+      }, '-=0.5')
+
+      //end timeline
+
+      refreshCircle.onclick = fadeOut;
+
+      function fadeOut(){
+        tl.resume();
+      }
+      function playAgain(){
+
+        tl.play(0, true);
+
+      }
+
+      return false;
+    });
+
+    </script>
 </body>
 </html>
