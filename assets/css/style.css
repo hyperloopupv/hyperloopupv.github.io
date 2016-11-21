@@ -125,7 +125,7 @@ body {
 /************************* INDEX PAGE *************************/
 
 .cover {
-    background-image: url("../../img/portada.png");
+    background-image: url("../../img/portada.jpg");
     position: relative;
     width: 100%;
     height: 100%;
@@ -139,7 +139,7 @@ body {
 
 .full {
     position: relative;
-    background: rgba(3, 3, 3, .8);
+    background: rgba(3, 3, 3, 0);
     width: 100%;
     height: 100vh;
     max-height: 1080px;

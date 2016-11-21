@@ -12,193 +12,144 @@
     <meta property="og:image" content="http://hyperloopupv.com/img/levitation.jpg">
     <link href="img/favicon.png" rel="shortcut icon" type="image/png">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/ticketPage.css" rel="stylesheet">
     <style>
-        .container {
+        section h1 {
+            color: #FD9638;
+            font-family: "Open Sans", arial, sans-serif;
+        }
+        
+        form {
+            text-transform: uppercase;
+        }
+        
+        form .field {
+            width: 400px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        
+        form .field label {
+            text-transform: uppercase;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
             width: 100%;
-            height: 100%;
+            padding: 18px 0;
+            font-size: 1.45em;
+            letter-spacing: 0.075em;
+            -webkit-transition: all 333ms ease-in-out;
+            -moz-transition: all 333ms ease-in-out;
+            -o-transition: all 333ms ease-in-out;
+            -ms-transition: all 333ms ease-in-out;
+            transition: all 333ms ease-in-out;
         }
         
-        .arrow-middle-null,
-        .arrow-left-null,
-        .arrow-right-null {
-            position: inline;
-        }
-        
-        svg {
-            width: 50%;
-            height: 50%;
-            max-width: 250px;
-            max-height: 250px;
-            cursor: pointer;
-        }
-        
-        .outline {
+        form .field label + span {
+            font-family: 'SSStandard';
             opacity: 0;
-        }
-        
-        .outline-bg {
-            opacity: 0.02;
-        }
-        
-        html,
-        body {
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            font: 18px;
-            background-color: #2C2C2C;
-            overflow: ;
-        }
-        
-        #fullDiv {
-            position: inline;
-        }
-        
-        .moreInfo ul {
-            margin: 10%;
-            padding: 0;
-            font-size: 30px;
-            color: rgba(59, 102, 134, 1);
-        }
-        
-        .moreInfo li {
-            float: center;
-            height: 80%;
-            width: 80%;
-            text-align: center;
-            list-style-type: none;
-            box-sizing: border-box;
-            border: 2px solid #999999;
-            margin: 3px;
-            font-size: 90px;
-        }
-        
-        .moreInfo li:hover {
-            background-color: #3B6686;
-            color: rgba(255, 255, 255, .7);
-        }
-        
-        .calendar ul {
-            margin: 0;
-            padding: 0;
-            font-size: 30px;
-            color: rgba(59, 102, 134, 1);
-        }
-        
-        .calendar li {
-            float: left;
+            color: white;
             display: block;
-            width: 13.5%;
-            text-align: center;
-            list-style-type: none;
-            box-sizing: border-box;
-            border: 2px solid #999999;
-            margin: 3px;
-            font-size: 30px;
+            position: absolute;
+            top: 12px;
+            left: 7%;
+            font-size: 2.5em;
+            text-shadow: 1px 2px 0 #cd6302;
+            -webkit-transition: all 333ms ease-in-out;
+            -moz-transition: all 333ms ease-in-out;
+            -o-transition: all 333ms ease-in-out;
+            -ms-transition: all 333ms ease-in-out;
+            transition: all 333ms ease-in-out;
         }
         
-        .calendar li:nth-child(n+1):nth-child(-n+7) {
-            font-size: 16px;
-            text-align: left;
-            color: rgba(255, 255, 255, .7);
-            border-style: none;
+        form .field input[type="text"],
+        form .field textarea {
+            border: none;
+            background: #E8E9EA;
+            width: 80.5%;
+            margin: 0;
+            padding: 18px 0;
+            padding-left: 19.5%;
+            color: #2c2c2c;
+            font-size: 1.4em;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
         }
         
-        .calendar li:nth-child(n+39),
-        {
-            font-weight: 900;
-            color: rgba(0, 0, 0, .3);
+        form .field input[type="text"]#msg,
+        form .field textarea#msg {
+            height: 18px;
+            resize: none;
+            -webkit-transition: all 333ms ease-in-out;
+            -moz-transition: all 333ms ease-in-out;
+            -o-transition: all 333ms ease-in-out;
+            -ms-transition: all 333ms ease-in-out;
+            transition: all 333ms ease-in-out;
         }
         
-        .calendar li:hover:nth-child(n+8):nth-child(-n+38) {
-            border-radius: 0px;
-            background-color: #3B6686;
-            color: #ecf0f1;
+        form .field input[type="text"]:focus,
+        form .field input[type="text"].focused,
+        form .field textarea:focus,
+        form .field textarea.focused {
+            outline: none;
         }
         
-        .inf-panel div {
-            padding-left: 30px;
-            color: rgba(255, 255, 255, .7);
+        form .field input[type="text"]:focus#msg,
+        form .field input[type="text"].focused#msg,
+        form .field textarea:focus#msg,
+        form .field textarea.focused#msg {
+            padding-bottom: 150px;
         }
         
-        .top-panel div {
-            padding-left: 30px;
-            padding-top: 0px;
-            color: rgba(255, 255, 255, .7);
+        form .field input[type="text"]:focus + label,
+        form .field input[type="text"].focused + label,
+        form .field textarea:focus + label,
+        form .field textarea.focused + label {
+            width: 18%;
+            background: #FD9638;
+            color: #FFF;
         }
         
-        .bottom-panel div {
-            padding-left: 30px;
-            color: rgba(59, 102, 134, 1);
-            font-size: 40px;
+        form .field input[type="text"].focused + label,
+        form .field textarea.focused + label {
+            color: #FD9638;
         }
         
-        .enjoy-css {
-            -webkit-box-sizing: content-box;
-            -moz-box-sizing: content-box;
-            box-sizing: content-box;
-            width: 75px;
-            height: 28px;
-            cursor: pointer;
-            margin: 0px;
-            border: 2px solid rgb(59, 102, 134);
-            -webkit-border-radius: 10px;
-            border-radius: 40px;
-            font: normal 20px "Advent Pro", Helvetica, sans-serif;
-            color: rgb(59, 102, 134);
-            text-align: left;
-            -o-text-overflow: clip;
-            text-overflow: clip;
-            letter-spacing: 1px;
-            background: rgba(0, 0, 0, 0);
-            -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
-            -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
-            -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
-            transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+        form .field:hover label {
+            width: 18%;
+            background: #FD9638;
+            color: white;
         }
         
-        .enjoy-css:hover {
-            color: rgba(255, 255, 255, 1);
-            background: rgb(59, 102, 134);
+        form input[type="submit"] {
+            background: #FD9638;
+            color: white;
+            -webkit-appearance: none;
+            border: none;
+            text-transform: uppercase;
+            position: relative;
+            padding: 13px 50px;
+            font-size: 1.4em;
+            letter-spacing: 0.1em;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            -webkit-transition: all 333ms ease-in-out;
+            -moz-transition: all 333ms ease-in-out;
+            -o-transition: all 333ms ease-in-out;
+            -ms-transition: all 333ms ease-in-out;
+            transition: all 333ms ease-in-out;
         }
         
-        .enjoy-css:active {
-            border: 2px solid rgba(47, 80, 105, 1);
-            background: rgba(47, 80, 105, 1);
-            -webkit-transition: none;
-            -moz-transition: none;
-            -o-transition: none;
-            transition: none;
+        form input[type="submit"]:hover {
+            background: #313A3D;
+            color: #FD9638;
         }
         
-        .highlight {
-            background-color: #869AA9;
-        }
-        
-        td:hover,
-        tr:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-        
-        .headerTable tr:hover {
-            background-color: rgba(0, 0, 0, 0.0);
-        }
-        
-        td {
-            padding-bottom: 10%;
-            padding-left: 5%;
-            border-bottom-style: groove;
-            border-width: thin;
-        }
-        
-        th {
-            padding-left: 4%;
-            text-align: left;
-        }
-        
-        .firstTr td {
-            border-top-style: groove;
+        form input[type="submit"]:focus {
+            outline: none;
+            background: #cd6302;
         }
     </style>
 </head>
@@ -221,7 +172,7 @@
         <div class="links">
             <ul>
                 <li><a href="about">About us</a></li>
-                <li><a href="systems">Systems</a></li>
+                <li><a href="design">Our Design</a></li>
                 <li><a href="team">Team</a></li>
                 <li><a href="sponsors">Sponsors</a></li>
                 <li><a href="buyTicket">Buy Ticket</a></li>
@@ -229,7 +180,7 @@
         </div>
 
     </nav>
-    <section>
+    <section id="TOP_PANEL">
         <div id="information" style="position">
             <br>
             <br>
@@ -238,7 +189,7 @@
             <div class="inf-panel">
                 <div class="row">
                     <div class="col-md-4">
-                        <p>This is for informational purposes only. This should not be taken seriously.</p>
+                        <p>This is for informational purposes (examples of estimated travel time); it does not constitute an offer to sell tickets.</p>
                     </div>
                     <div class="col-md-2">
                     </div>
@@ -256,14 +207,14 @@
             <!--INFORMATION PANE-->
             <div class="top-panel">
                 <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         Date:
                     </div>
                     <div class="col-md-2">
                         Departure City:
                     </div>
-                    <div class="col-md-2">
-                        Departure Time:
+                    <div class="col-md-1">
+                        Time:
                     </div>
                     <div class="col-md-2">
                         Destination:
@@ -278,23 +229,63 @@
             </div>
             <div class="bottom-panel">
                 <div class="row">
-                    <div class="col-md-2 date" style="line-height: 1">
+                    <div class="col-md-3 date" style="line-height: 1">
                         --
                     </div>
                     <div class="col-md-2 origin">
                         --
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-1">
                         ANY
                     </div>
                     <div class="col-md-2 destination">
                         --
                     </div>
-                    <div class="col-md-2 price">
-                        --
+
+                    <!--INFORMATION PANE-->
+                    <div class="top-panel">
+                        <div class="row">
+                            <div class="col-md-2">
+                                Date:
+                            </div>
+                            <div class="col-md-2">
+                                Departure City:
+                            </div>
+                            <div class="col-md-2">
+                                Departure Time:
+                            </div>
+                            <div class="col-md-2">
+                                Destination:
+                            </div>
+                            <div class="col-md-2">
+                                Price:
+                            </div>
+                            <div class="col-md-2">
+                                <div class="enjoy-css" id="btnClickNext">Next</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-2">
-                        <div class="enjoy-css" id="btnBack" style="display:none; font-size: 20px; margin-top: 20px; color: rgba(255,255,255, .7);">Back</div>
+                    <div class="bottom-panel">
+                        <div class="row">
+                            <div class="col-md-2 date" style="line-height: 1">
+                                --
+                            </div>
+                            <div class="col-md-2 origin">
+                                --
+                            </div>
+                            <div class="col-md-2">
+                                ANY
+                            </div>
+                            <div class="col-md-2 destination">
+                                --
+                            </div>
+                            <div class="col-md-2 price">
+                                --
+                            </div>
+                            <div class="col-md-2">
+                                <div class="enjoy-css" id="btnBack" style="display:none; font-size: 20px; margin-top: 20px; color: rgba(255,255,255, .7);">Back</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -302,17 +293,11 @@
     </section>
     <hr>
     <section id="booking">
-        <center>
-            <div id=download class="bottom-panel" style="display:none">
-                <!--DOWNLOAD BUTTON, ONLY AFTER CALENDAR-->
-                <div class="col-md-12">CLICK BUTTON TO DOWNLOAD!</div>
-
-            </div>
-        </center>
-        <div id='fullDiv'>
+        <div id='fullDiv' style="margin:10px;">
             <div id='map' style="margin-left:30px;">
-                <img src="img/map/map_of_Europe.png" style=" width: 60%; float:left" class="mapImg">
-
+                <img src="img/map/map_of_Europe.png" style=" width: 50%; float:left" class="mapImg">
+            </div>
+            <div id='routes'>
                 <table id='route' class="table" style="color: rgb(59,102,134); font-size: 24px; width: 35%">
                     <thead class="headerTable">
                         <tr>
@@ -330,7 +315,7 @@
                                 </div>
                             </td>
                             <td class="align-left">
-                                $18.00
+                                &euro;18.00
                             </td>
                         </tr>
 
@@ -342,7 +327,7 @@
                                 </div>
                             </td>
                             <td class="align-right">
-                                $22.00
+                                &euro;22.00
                             </td>
                         </tr>
 
@@ -354,19 +339,19 @@
                                 </div>
                             </td>
                             <td class="align-right">
-                                $24.00
+                                &euro;24.00
                             </td>
                         </tr>
 
                         <tr>
                             <td id="Rom-Zur">
-                                Roma-Zurich
+                                Rome-Zurich
                                 <div class="route-chooser">
                                     41 Minutes
                                 </div>
                             </td>
                             <td class="align-right">
-                                $25.00
+                                &euro;25.00
                             </td>
                         </tr>
 
@@ -376,6 +361,7 @@
 
             <div id='datePicker' class="calendar" style="display:none;">
                 <div id="month" style="color: rgba(59,102,134,1); font-size:50px;"><b></b></div>
+                <div id="month_info" style="color:#FFFFFF; font-size:16px;">(choose date)</div>
                 <ul id='chooseDate'>
 
                     <li>Sunday</li>
@@ -419,326 +405,253 @@
                 </ul>
 
             </div>
-            <div id="pickMoreInfo" class="moreInfo" style="display:none;">
-                <div class="row" style="height:70%; padding: 20px;">
-                    <div class="container">
-                        <svg class="loader-svg" version="1.1" width="180px" height="180px" viewBox="0 0 180 180">
-                            <defs>
-                                <filter id="glow" y="-50%" height="180%">
-                                    <feGaussianBlur stdDeviation="2 2" result="coloredBlur" />
-                                    <feMerge>
-                                        <feMergeNode in="coloredBlur" />
-                                        <feMergeNode in="SourceGraphic" />
-                                    </feMerge>
-                                </filter>
-                            </defs>
-                            <g class="all-lines">
-                                <path class="outline" fill="none" stroke="#ededed" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M90.5,161C51.6,161,20,129.4,20,90.5S51.6,20,90.5,20S161,51.6,161,90.5S129.4,161,90.5,161" />
-                                <path class="outline-bg" fill="none" stroke="#ededed" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M90.5,161C51.6,161,20,129.4,20,90.5S51.6,20,90.5,20S161,51.6,161,90.5S129.4,161,90.5,161" />
-                                <polyline class="arrow-head" fill="none" stroke="#ededed" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-                      	122.5,103 90,135.5 57.5,103 " />
-                                <line class="arrow-line" fill="none" stroke="#ededed" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="90" y1="52" x2="90" y2="135" />
+            <!--CIRCLING LOAD BAR-->
+            <div id="bookTicket" style="display:none">
+                <div class="container">
+                    <svg class="lineSVG" version="1.1" x="0px" y="0px" width="900px" height="600px" viewBox="0 0 900 600">
+                        <defs>
+
+                            <filter id="glow" width="400%" x="-50%" y="-50%" height="200%">
+                                <feGaussianBlur stdDeviation="2 2" result="coloredBlur" />
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+                            <filter id="heavyGlow" width="400%" x="-50%" y="-50%" height="200%">
+                                <feGaussianBlur stdDeviation="9 9" result="coloredBlur" />
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+
+                        </defs>
+                        <line class="loadLineGhost" fill="none" stroke="#1E1E24" stroke-width="2" stroke-linecap="none" stroke-linejoin="none" stroke-miterlimit="10" x1="100" y1="340" x2="800" y2="340" opacity="0" />
+
+
+
+                        <line class="loadLineTip" filter="url(#heavyGlow)" fill="none" stroke="#5CE2ED" stroke-width="2" stroke-linecap="none" stroke-linejoin="none" stroke-miterlimit="10" x1="100" y1="340" x2="800" y2="340" />
+
+                        <g class="lineGroup" filter="url(#glow)">
+                            <line class="loadLine" fill="none" stroke="#5CE2ED" stroke-width="2" stroke-linecap="none" stroke-linejoin="none" stroke-miterlimit="10" x1="100" y1="340" x2="800" y2="340" />
+
+                            <g class="refreshGroup">
+
+                                <path class="tick" fill="none" stroke="#5CE2ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+                	M53.5,11.4l-24,32.1l-14-9" />
+
+                                <circle class="refreshCircle" fill="rgba(0,0,0,0)" stroke="#5CE2ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="30" cy="30" r="30" />
                             </g>
-                        </svg>
-                        <div class="arrow-left-null"></div>
-                        <div class="arrow-middle-null"></div>
-                        <div class="arrow-right-null"></div>
-                    </div>
+                        </g>
+
+                    </svg>
+                    <div class="downloading">Booking, please wait...</div>
+                    <div class="refresh">Ticket booked!</div>
+                </div>
+            </div>
+            <div id="pickMoreInfo" class="bookingTicket" style="display:none;">
+                <div class="container" id="form">
+                    <section id="hire" style="float:right;">
+                        <h1>Booking Information</h1>
+
+                        <form id="book">
+                            <div class="field name-box">
+                                <input type="text" id="name" placeholder="Who are you?" />
+                                <label for="name">Name</label>
+                            </div>
+
+                            <div class="field email-box">
+                                <input type="text" id="email" placeholder="name@email.com" />
+                                <label for="email">Email</label>
+                            </div>
+
+                            <div class="field name-box">
+                                <input type="text" id="name" placeholder="Age?" />
+                                <label for="name">Age</label>
+                            </div>
+
+                            <input type="submit" value="Book" />
+                        </form>
+                    </section>
                 </div>
             </div>
         </div>
     </section>
-
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
     <script type="text/javascript" src="assets/js/all.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script type="text/javascript" src="assets/js/ticketPage.js"></script>
+    <script type="text/javascript" src="assets/js/formBooking.js"></script>
     <script>
-        var winHeight = $(window).height() * 0.50;
-        var height = (winHeight * 16.6666) / 100;
-        var lineHeight = height + "px";
+        $('#book').submit(function () {
+            $("#map").hide();
+            $("#pickMoreInfo").hide();
+            $("#bookTicket").fadeIn("slow");
+            //SVG BOOKING ANIMATION
+            var container = document.querySelector('.container');
+            var lineSVG = document.querySelector('.lineSVG');
+            var downloading = document.querySelector('.downloading');
+            var refresh = document.querySelector('.refresh');
+            var loadLine = document.querySelector('.loadLine');
+            var loadLineTip = document.querySelector('.loadLineTip');
+            var loadLineGhost = document.querySelector('.loadLineGhost');
+            var refreshCircle = document.querySelector('.refreshCircle');
+            var tick = document.querySelector('.tick');
+            var refreshGroup = document.querySelector('.refreshGroup');
+            var failAt = 100; //percent
+            var glowTipLengthPercent = 5;
+            var lineStart = Number(loadLine.getAttribute('x1'));
+            var lineEnd = Number(loadLine.getAttribute('x2'));
+            var lineLength = lineEnd - lineStart;
+            var failPercent = failAt / 100; //percent
+            var refreshCircleRadius = Number(refreshCircle.getAttribute('r'));
+            var refreshCircleRadiusAsPercentOfLine = (refreshCircleRadius / lineLength) * 100;
 
-        $("li").css("line-height", lineHeight);
-        $("li").css("height", height);
-    </script>
-    <script>
-        $('#map').hide();
-        $("#map").fadeIn("slow");
-        var calendarPage = false;
-        $('#btnClickNext').on('click', function () {
-            if (calendarPage) {
-                $('#datePicker').hide();
-                $('#pickMoreInfo').fadeIn("slow");
-                calendarPage = false;
-                $('#download').fadeIn("slow");
-            } else {
-                $('#map').hide();
-                $('#btnBack').show();
-                $('#datePicker').fadeIn("slow");
-                calendarPage = true;
-            }
-
-        });
-        $('#btnBack').on('click', function () {
-            $('#map').siblings('div').hide();
-            $("#map").fadeIn("slow");
-            $('#btnBack').hide();
-            calendarPage = false;
-
-        });
-    </script>
-
-    <script>
-        $("#route tr").click(function () {
-            var selected = $(this).hasClass("highlight");
-            $("#route tr").removeClass("highlight");
-            if (!selected)
-                $(this).addClass("highlight");
-        });
-    </script>
-
-    <script>
-        var table = document.getElementById("route");
-        if (table != null) {
-            for (var i = 0; i < table.rows.length; i++) {
-                for (var j = 0; j < table.rows[i].cells.length; j++)
-                    table.rows[i].cells[j].onclick = function () {
-                        tableText(this);
-                    };
-            }
-        }
-
-        function tableText(tableCell) {
-            if (tableCell.innerHTML.indexOf("Valencia") !== -1) {
-                //CHANGE ATTRIBUTES
-                $(".origin").html('Valencia');
-                $(".destination").html('Barcelona');
-                $(".price").html('18 Euros');
-                $(".mapImg").attr("src", "img/map/map_Val-Bar.png");
-            } else if (tableCell.innerHTML.indexOf("Madrid") !== -1) {
-                //CHANGE ATTRIBUTES
-                $(".origin").html('Madrid');
-                $(".destination").html('Toulouse');
-                $(".price").html('24 Euros');
-                $(".mapImg").attr("src", "img/map/map_Mad-Tou.png");
-            } else if (tableCell.innerHTML.indexOf("Paris") !== -1) {
-                //CHANGE ATTRIBUTES
-                $(".origin").html('Paris');
-                $(".destination").html('Frankfurt');
-                $(".price").html('22 Euros');
-                $(".mapImg").attr("src", "img/map/map_Par-Fra.png");
-            } else if (tableCell.innerHTML.indexOf("Zurich") !== -1) {
-                //CHANGE ATTRIBUTES
-                $(".origin").html('Zurich');
-                $(".destination").html('Rome');
-                $(".price").html('25 Euros');
-                $(".mapImg").attr("src", "img/map/map_Zur-Rom.png");
-            }
-        }
-    </script>
-    <script>
-        $('#chooseDate li').click(function () {
-            var temp = $(this).text();
-            $('.date').html(temp + ' November');
-        });
-    </script>
-
-    <script>
-        var monthNames = ["January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-    ];
-
-        var d = new Date();
-        $('#month').html(monthNames[d.getMonth()]);
-    </script>
-    <script>
-        var loaderSVG = document.querySelector('.loader-svg');
-        var container = document.querySelector('.container');
-        var arrowMiddleNull = document.querySelector('.arrow-middle-null');
-        var arrowRightNull = document.querySelector('.arrow-right-null');
-        var arrowLeftNull = document.querySelector('.arrow-left-null');
-        var arrowHead = document.querySelector('.arrow-head');
-        var arrowLine = document.querySelector('.arrow-line');
-        var outline = document.querySelector('.outline');
-        var outlineBg = document.querySelector('.outline-bg');
-        var allLines = document.querySelector('.all-lines');
-        var isDevice = (/android|webos|iphone|ipad|ipod|blackberry/i.test(navigator.userAgent.toLowerCase()));
-
-        TweenMax.set([container, 'svg'], {
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            xPercent: -50,
-            yPercent: -50
-        });
-        if (!isDevice) {
-
-            TweenMax.set(allLines, {
-                filter: 'url(#glow)'
+            TweenMax.set(container, {
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                xPercent: -50,
+                yPercent: -50
             })
-        }
-        TweenMax.set(arrowLeftNull, {
-            x: 57.5,
-            y: 103
-        })
 
-        TweenMax.set(arrowMiddleNull, {
-            x: 90,
-            y: 135.5
-        })
-        TweenMax.set(arrowRightNull, {
-            x: 122.5,
-            y: 103
-        })
+            TweenMax.set([loadLine, loadLineTip], {
+                drawSVG: '-0.5% 0%'
+            })
 
-        var tl = new TimelineMax({
-            paused: true,
-            onUpdate: updateSVG
-        });
-
-        tl.set(outline, {
+            TweenMax.set([tick], {
+                drawSVG: '0% 0%',
                 alpha: 0
             })
-            .set(outline, {
-                drawSVG: '49.8% 49.9%'
-            })
-            .to(arrowLine, 0.6, {
-                drawSVG: '59% 60%',
-                ease: Power3.easeInOut
-            })
-
-        .to(arrowMiddleNull, 0.6, {
-            y: 103,
-            ease: Elastic.easeOut
-        })
-
-        .to(arrowLine, 0.5, {
-            y: '-=95',
-            ease: Power1.easeOut
-        }, '-=0.55')
-
-        .to(arrowLine, 0.2, {
-                y: '+=17',
-                ease: Power1.easeIn
-            })
-            .set(arrowLine, {
+            TweenMax.set([refreshCircle], {
+                drawSVG: '0% 0%',
                 alpha: 0
             })
-            .set(outline, {
-                alpha: 1
+            TweenMax.set([refreshGroup], {
+                y: 310
             })
 
-        .to(outline, 3, {
-                drawSVG: '0% 100%',
-                ease: Linear.easeNone
-            })
-            //shrinks the line
-            .to(arrowLeftNull, 3, {
-                x: '+=32.5',
-                ease: Linear.easeNone
-            }, '-=3')
-            .to(arrowRightNull, 3, {
-                x: '-=32.5',
-                ease: Linear.easeNone
-            }, '-=3')
-
-        .to(arrowLeftNull, 0.6, {
-                x: '-=30',
-                y: '-=5',
-                delay: 0.4,
-                ease: Back.easeOut
-            })
-            .to(arrowMiddleNull, 0.6, {
-                y: '+=15',
-                ease: Back.easeOut
-            }, '-=0.6')
-            .to(arrowRightNull, 0.6, {
-                x: '+=32.5',
-                y: '-=35',
-                ease: Back.easeOut
-            }, '-=0.6')
-
-        .to(arrowHead, 0.6, {
-                stroke: '#2EC26A'
-            }, '-=0.6')
-            .to(outline, 0.5, {
-                drawSVG: '49.8% 49.9%',
-                delay: 1
+            var tl = new TimelineMax({
+                onComplete: playAgain
+            });
+            tl.set(refreshGroup, {
+                alpha: 1,
+                x: (failPercent * lineLength) + lineStart - (refreshCircleRadius * 2)
             })
 
+            .to(loadLineGhost, 1, {
+                    alpha: 0.5
+                })
+                .to([loadLine, ], 6, {
+                    drawSVG: failAt + '% 0%',
+                    ease: SteppedEase.config(40)
+                })
 
-        .set(outline, {
-                alpha: 0
+            .to([loadLineTip, ], 6, {
+                    drawSVG: failAt + '% ' + (failAt - glowTipLengthPercent) + '%',
+                    ease: SteppedEase.config(40)
+                }, '-=6')
+                .from([loadLine, loadLineTip], 0.1, {
+                    immediateRender: false,
+                    stroke: 'green',
+                    repeat: 12,
+                    yoyo: true
+                })
+
+            .set([refreshCircle], {
+                    alpha: 1
+                })
+                .to(loadLineTip, 1, {
+                    drawSVG: (failAt) + '% ' + (failAt) + '%'
+                })
+
+
+            .to([refreshCircle], 1, {
+                    drawSVG: '0% 88%'
+                }, '-=1')
+                .to([loadLine, loadLineTip], 1, {
+                    drawSVG: (failAt) + '% ' + (failAt) + '%'
+                }, '-=1')
+                .set([tick], {
+                    alpha: 1
+                })
+
+            .to([tick], 1, {
+                drawSVG: '95% 0%'
             })
-            .set(arrowLine, {
-                alpha: 1
-            })
 
-        .to(arrowLine, 0.3, {
-                y: '+=95',
-                //drawSVG:'0% 100%',
-                ease: Power1.easeIn
-            })
-            .to(arrowLine, 0.6, {
-                y: '-=18',
-                drawSVG: '0% 100%',
-
-                ease: Power2.easeInOut
-            })
-            .to(arrowHead, 0.6, {
-                stroke: '#ededed'
-            }, '-=0.6')
-            .to(arrowLeftNull, 0.6, {
-                x: 57.5,
-                y: 103,
-                //delay:1,
-                ease: Power3.easeOut
-            }, '-=0.6')
-            .to(arrowMiddleNull, 0.6, {
-                x: 90,
-                y: 135.5,
-                ease: Power3.easeOut
-            }, '-=0.6')
-            .to(arrowRightNull, 0.6, {
-                x: 122.5,
-                y: 103,
-                ease: Power3.easeOut
-            }, '-=0.6')
+            .to(refreshGroup, 2, {
+                    x: (lineLength / 2) + (lineStart - (refreshCircleRadius)),
+                    rotation: -360,
+                    transformOrigin: '50% 50%',
+                    ease: Power3.easeInOut
+                }, '-=1')
+                .to([refreshCircle], 1, {
+                    drawSVG: '0% 100%'
+                }, '-=2')
+                .to([tick], 1, {
+                    drawSVG: '95% 20%'
+                }, '-=2')
+                .set([loadLine, loadLineTip], {
+                    alpha: 0
+                })
 
 
 
+            .to(loadLineGhost, 2, {
+                    alpha: 0,
+                    ease: Power3.easeInOut
+                }, '-=2')
+                .to(refresh, 0.5, {
+                    alpha: 1,
+                    ease: Power2.easeInOut
+                })
+                .to(downloading, 0.5, {
+                    alpha: 0,
+                    ease: Power2.easeInOut
+                }, '-=0.5')
+                .to([downloading, refresh], 0.5, {
+                    top: '+=10',
+                    ease: Power2.easeInOut
+                }, '-=0.5')
 
-        function updateSVG() {
-            //console.log(arrowMiddleNull._gsTransform.y)
-            var leftX = arrowLeftNull._gsTransform.x;
-            var leftY = arrowLeftNull._gsTransform.y;
-            var middleX = arrowMiddleNull._gsTransform.x;
-            var middleY = arrowMiddleNull._gsTransform.y;
-            var rightX = arrowRightNull._gsTransform.x;
-            var rightY = arrowRightNull._gsTransform.y;
+            .addPause()
 
-            var pointStr = leftX + ',' + leftY + ' ' + middleX + ',' + middleY + ' ' + rightX + ', ' + rightY;
-            setTimeout(
-                function () {
-                    window.location.replace("index.html");
-                    //do something special
-                }, 6000);
+            .to(refreshGroup, 0.3, {
+                    alpha: 0
+                })
+                .to(refresh, 0.5, {
+                    alpha: 0,
+                    ease: Power2.easeInOut
+                })
+                .to(downloading, 0.5, {
+                    alpha: 1,
+                    ease: Power2.easeInOut
+                }, '-=0.5')
+                .to([downloading, refresh], 0.5, {
+                    top: '-=10',
+                    ease: Power2.easeInOut
+                }, '-=0.5')
 
+            //end timeline
 
-            //console.log(pointStr)
-            TweenMax.set(arrowHead, {
-                attr: {
-                    points: pointStr
-                }
-            })
-        }
+            refreshCircle.onclick = fadeOut;
 
-        loaderSVG.onclick = function () {
+            function fadeOut() {
+                tl.resume();
+            }
 
-            tl.restart();
+            function playAgain() {
 
-        }
+                tl.play(0, true);
+
+            }
+
+            return false;
+        });
     </script>
 </body>
 
