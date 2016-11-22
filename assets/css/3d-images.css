@@ -7,10 +7,9 @@ section{
   -webkit-transition: all 900ms cubic-bezier(0.165, 0.84, 0.44, 1);
   -moz-transition: all 900ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 900ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  position: center;
+
   opacity: 0;
-	margin-top:10%;
-	margin-left:10%;
+
 }
 
 .line {
@@ -66,11 +65,8 @@ img {
 }
 .hi {
     display: block;
-    position: relative;
-
     width: 300px;
     height: 500px;
-    margin: 0px 0 0 20px;
 }
 /*------ 3D picture style ------*/
 
@@ -238,7 +234,6 @@ body.mobile .mouseover:after {
     right: -5px;
 }
 .full-size {
-    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
