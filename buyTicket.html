@@ -13,6 +13,9 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/ticketPage.css" rel="stylesheet">
     <style>
+    .legal-info{
+      color:#FFF;
+    }
     section h1{
       color: #FD9638;
       font-family: "Open Sans", arial, sans-serif;
@@ -137,6 +140,8 @@
     </style>
 </head>
 <body>
+  <!--POPUP WINDOW CODE-->
+
     <nav class="navbar static">
 
         <div class="nav-logo">
@@ -162,7 +167,9 @@
         </div>
 
     </nav>
+
       <section id="TOP_PANEL">
+
         <div id= "information" style="position" >
           <br><br><br><br>
           <div class="inf-panel">
@@ -183,6 +190,7 @@
               <div class="col-md-2"></div>
           </div>
         </div>
+
 
           <!--INFORMATION PANE-->
           <div class="top-panel">
@@ -394,7 +402,7 @@
               <div class="container" id="form">
                 <section id="hire" style="float:right;">
                   <h1>Booking Information</h1>
-
+                  <div class="legal-info">*Information not saved.</div>
                   <form id="book">
               	      <div class="field name-box">
               		        <input type="text" id="name" placeholder="Who are you?"/>
@@ -411,7 +419,7 @@
               </div>
             </div>
       </section>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
     <script type="text/javascript" src="assets/js/all.js"></script>
@@ -520,6 +528,7 @@
         transformOrigin:'50% 50%',
         ease:Power3.easeInOut
       }, '-=1')
+
       .to([ refreshCircle], 1, {
         drawSVG:'0% 100%'
       },'-=2')

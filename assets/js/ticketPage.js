@@ -1,3 +1,4 @@
+var selection = false;
 //Detects if device is mobile
 function detectmob() {
    if(window.innerWidth <= 800 || window.innerHeight <= 600) {
@@ -27,12 +28,14 @@ $("#map").fadeIn("slow");
 $("#routes").fadeIn("slow");
 var calendarPage = false;
 $('#btnClickNext').on('click',function(){
+  if(selection){
     if(calendarPage){
       $('#map').fadeIn("slow");
       $('#datePicker').hide();
       $('#pickMoreInfo').fadeIn("slow");
       calendarPage = false;
       $('#btnClickNext').hide();
+      selection = false;
     }else{
       $('#map').hide();
       $('#routes').hide();
@@ -40,10 +43,13 @@ $('#btnClickNext').on('click',function(){
       $('#datePicker').fadeIn("slow");
       calendarPage = true;
       $('#btnClickNext').addClass("disable");
+      selection = false;
     }
+  }
 
 });
 $('#btnBack').on('click',function(){
+    selection = true; //remembers that we chose one before
     $('#map').siblings('div').hide();
     $("#map").fadeIn("slow");
     $('#routes').fadeIn("slow");
@@ -56,6 +62,7 @@ $('#btnBack').on('click',function(){
 
 
   $("#route tr").click(function() {
+    selection=true;
   var selected = $(this).hasClass("highlight");
   $("#route tr").removeClass("highlight");
   if(!selected)
@@ -63,6 +70,7 @@ $('#btnBack').on('click',function(){
 });
 
 $("#datePicker li").click(function() {
+  selection=true;
 var selected = $(this).hasClass("activate");
 $("#datePicker li").removeClass("activate");
 $('#btnClickNext').removeClass("disable");
@@ -83,6 +91,7 @@ if(!selected)
   }
 
   function tableText(tableCell) {
+    selection = true;
       if(tableCell.innerHTML.indexOf("Valencia") !== -1){
         //CHANGE ATTRIBUTES
         $(".origin").html('Valencia');
