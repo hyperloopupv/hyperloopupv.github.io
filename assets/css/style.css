@@ -367,7 +367,7 @@ body {
 }
 
 .concept .alt-features-descr {
-        color: #777;
+    color: #777;
     font-size: 14px;
     font-weight: 300;
     line-height: 1.86;
@@ -725,7 +725,7 @@ footer a:hover {
 /************************* PARTNERS PAGE *************************/
 
 #partners h2 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
@@ -733,8 +733,12 @@ footer a:hover {
     line-height: 1.4;
 }
 
-#partners .row {
-    margin: 8vh 0;
+#partners .text-center {
+    margin: 6vh 0 2vh 0;
+}
+
+#partners img {
+    max-height: 180px;
 }
 
 .social {
@@ -767,12 +771,13 @@ footer a:hover {
 .social .fa-youtube:hover {
     color: #bb0000;
 }
+
 .idea {
     padding-top: 12vh;
 }
 
 .award-icon {
-        font-size: 60px;
+    font-size: 60px;
     line-height: 1.3;
     color: #111;
 }
