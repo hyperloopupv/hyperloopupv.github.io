@@ -413,7 +413,7 @@
               		        <input type="text" id="email" placeholder="name@email.com"/>
               		        <label for="email">Email</label>
               	      </div>
-              	      <input type="submit" value="Book"/>
+              	      <input type="submit" value="Book" onclick="return pdf();"/>
                 </form>
               </section>
               </div>
@@ -424,7 +424,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
     <script type="text/javascript" src="assets/js/all.js"></script>
-          
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
     <script type="text/javascript" src="assets/js/ticketPage.js"></script>
     <script type="text/javascript" src="assets/js/formBooking.js"></script>
@@ -594,6 +594,14 @@
       return false;
     });
 
+    </script>
+    <script>
+      function pdf(){
+        setTimeout(function(){
+    //do what you need here
+    window.location.replace("ticket.php");
+}, 11000);
+      }
     </script>
 </body>
 </html>
