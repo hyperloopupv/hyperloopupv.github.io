@@ -12,6 +12,57 @@
     <meta property="og:image" content="http://hyperloopupv.com/img/levitation.jpg">
     <link href="img/favicon.png" rel="shortcut icon" type="image/png">
     <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+      .col-xs-12{
+        padding-left: 5em;
+        padding-right: 5em;
+      }
+      .spacing{
+        padding: 2em;
+      }
+
+      a:-webkit-any-link {
+          text-decoration: none;
+          color: none;
+      }
+
+      a:link {
+          background-color: none;
+          text-decoration: none;
+      }
+
+      a.back-to-top {
+          display: none;
+          width: 60px;
+          height: 60px;
+          text-indent: -9999px;
+          position: fixed;
+          z-index: 999;
+          right: 20px;
+          bottom: 20px;
+          background: #666666 url("img/up-arrow.png") no-repeat center 43%;
+          -webkit-border-radius: 30px;
+          -moz-border-radius: 30px;
+          border-radius: 30px;
+      }
+
+      li.hide {
+          list-style-type: none;
+      }
+
+      ul.horizontal {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background: rgba(54, 25, 25, 0);
+      }
+
+      li.special {
+          display: inline;
+          padding: 10px 10px 10px 10px;
+      }
+    </style>
 </head>
 
 <body>
@@ -43,16 +94,29 @@
 
     </nav>
 
-    <header class="background-image" style="background-image: url(img/bg.jpg);">
+    <header class="background-image" style="background-image: url(img/portada_old.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <div class="site-heading">
-                        <h1>Sponsors</h1>
+                    <div class="site-heading" style="padding-top:50px;">
+                        <h1 style="padding-bottom:20px;">Sponsors</h1>
                         <div class="subheading"><a href="mailto:sponsors@hyperloopupv.com">Join a global movement</a></div>
                     </div>
                 </div>
             </div>
+            <font color="white">
+              <center>
+              <ul class="horizontal">
+              <!--  <li class="special"><a href="#premium"><font color= white>Premium</font></a></li>-->
+            <li class="special"><a href="#gold"><font color= white>Gold</a></li>
+            <li class="special"><a href="#silver"><font color= white>Silver</a></li>
+            <li class="special"><a href="#bronze"><font color= white>Bronze</a></li>
+            <li class="special"><a href="#collaborator"><font color= white>Collaborators</a></li>
+            <li class="special"><a href="#institution"><font color= white>Institutions</a></li>
+            </ul>
+            </center>
+            </font>
+            <font color="black">
         </div>
     </header>
 
@@ -72,6 +136,7 @@
           -->
             <div class="row">
                 <div class="col-xs-12 text-center">
+                  <a name="gold"></a>
                     <h2>Gold Partners</h2>
                 </div>
             </div>
@@ -86,6 +151,7 @@
 
             <div class="row">
                 <div class="col-xs-12 text-center">
+                  <a name="silver"></a>
                     <h2>Silver Partners</h2>
                 </div>
             </div>
@@ -97,6 +163,7 @@
 
             <div class="row">
                 <div class="col-xs-12 text-center">
+                  <a name="bronze"></a>
                     <h2>Bronze Partners</h2>
                 </div>
             </div>
@@ -108,52 +175,54 @@
 
             <div class="row">
                 <div class="col-xs-12 text-center">
+                  <a name="collaborator"></a>
                     <h2>Collaborators</h2>
                 </div>
             </div>
             <div class="row middle-md center-xs">
-                <div class="col-xs-6 col-md-3">
+                <div class="col-xs-6 col-md-3 spacing">
                     <a href="http://www.ansys.com"><img src="img/partners/collaborators/ansys.png" class="img-responsive center-block"></a>
                 </div>
-                <div class="col-xs-6 col-md-3">
+                <div class="col-xs-6 col-md-3 spacing">
                     <a href="http://www.stadlerrail.com"><img src="img/partners/collaborators/stadler.png" class="img-responsive center-block"></a>
                 </div>
-                <div class="col-xs-6 col-md-3">
+                <div class="col-xs-6 col-md-3 spacing">
                     <a href="http://www.jesiva.com"><img src="img/partners/bronze/jesiva.png" class="img-responsive center-block"></a>
                 </div>
-                <div class="col-xs-6 col-md-3">
+                <div class="col-xs-6 col-md-3 spacing">
                     <a href="http://www.universalmechanism.com/en/pages/index.php?id=1"><img src="img/partners/collaborators/universal_mechanism.jpeg" class="img-responsive center-block"></a>
                 </div>
-                <div class="col-xs-6 col-md-3">
+                <div class="col-xs-6 col-md-3 spacing">
                     <a href="http://www.esteco.com/"><img src="img/partners/collaborators/esteco.jpg" class="img-responsive center-block"></a>
                 </div>
-                <div class="col-xs-6 col-md-3">
+                <div class="col-xs-6 col-md-3 spacing">
                     <a href="https://www.pce-instruments.com/english/"><img src="img/partners/collaborators/pce_instruments.jpg" class="img-responsive center-block"></a>
                 </div>
-                <div class="col-xs-6 col-md-3">
+                <div class="col-xs-6 col-md-3 spacing">
                     <a href="https://www.3dconnexion.es/"><img src="img/partners/collaborators/3dconnexion.png" class="img-responsive center-block"></a>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-xs-12 text-center">
+                  <a name="institution"></a>
                     <h2>Institutions and Organisations</h2>
                 </div>
                 <div class="row middle-md center-xs">
-                    <div class="col-xs-6 col-md-3">
+                    <div class="col-xs-6 col-md-3 spacing">
                         <a href="http://www.gva.es/"><img src="img/partners/collaborators/gen_valenciana.png" class="img-responsive center-block"></a>
                     </div>
-                    <div class="col-xs-6 col-md-3">
+                    <div class="col-xs-6 col-md-3 spacing">
                         <a href="https://www.makersupv.com"><img src="img/partners/collaborators/makersupv.png" class="img-responsive center-block"></a>
                     </div>
-                    <div class="col-xs-6 col-md-3">
+                    <div class="col-xs-6 col-md-3 spacing">
                         <a href="http://generacionespontanea.upv.es"><img src="img/partners/collaborators/ge.png" class="img-responsive center-block"></a>
                     </div>
 
-                    <div class="col-xs-6 col-md-3">
+                    <div class="col-xs-6 col-md-3 spacing">
                         <a href="http://www.etsid.upv.es"><img src="img/partners/collaborators/etsid.png" class="img-responsive center-block"></a>
                     </div>
-                    <div class="col-xs-6 col-md-3">
+                    <div class="col-xs-6 col-md-3 spacing">
                         <a href="http://marcaespana.es/"><img src="img/partners/collaborators/marcaespanya.png" class="img-responsive center-block"></a>
                     </div>
                 </div>
@@ -191,7 +260,22 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
     <script type="text/javascript" src="assets/js/all.js"></script>
-
+    <script>
+        $(function () {
+            $('a[href*="#"]:not([href="#"])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
