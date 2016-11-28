@@ -89,6 +89,11 @@ if (table != null) {
             };
     }
 }
+//LOCAL VARIABLES FOR TICKET GENERATION
+var origin;
+var destination;
+var price;
+
 
 function tableText(tableCell) {
     selection = true;
