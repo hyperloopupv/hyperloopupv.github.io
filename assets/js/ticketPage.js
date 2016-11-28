@@ -96,6 +96,9 @@ function tableText(tableCell) {
         //CHANGE ATTRIBUTES
         $(".origin").html('Valencia');
         $(".destination").html('Barcelona');
+        $( "input[name*='go']" ).val("Valencia");
+        $( "input[name*='back']" ).val("Barcelona");
+        
         $(".price").html('18 Euros');
         $(".mapImg").attr("src", "img/map/map_Val-Bar.png");
         //CHANGE BOOKING ticketPage
@@ -105,18 +108,27 @@ function tableText(tableCell) {
         //CHANGE ATTRIBUTES
         $(".origin").html('Madrid');
         $(".destination").html('Toulouse');
+        $( "input[name*='go']" ).val("Madrid");
+        $( "input[name*='back']" ).val("Toulouse");
+        
         $(".price").html('24 Euros');
         $(".mapImg").attr("src", "img/map/map_Mad-Tou.png");
     } else if (tableCell.innerHTML.indexOf("Paris") !== -1) {
         //CHANGE ATTRIBUTES
         $(".origin").html('Paris');
         $(".destination").html('Frankfurt');
+        $( "input[name*='go']" ).val("Paris");
+        $( "input[name*='back']" ).val("Frankfurt");
+        
         $(".price").html('22 Euros');
         $(".mapImg").attr("src", "img/map/map_Par-Fra.png");
     } else if (tableCell.innerHTML.indexOf("Zurich") !== -1) {
         //CHANGE ATTRIBUTES
         $(".origin").html('Zurich');
         $(".destination").html('Rome');
+        $("input[name*='go']").val("Zurich");
+        $("input[name*='back']").val("Rome");
+        
         $(".price").html('25 Euros');
         $(".mapImg").attr("src", "img/map/map_Zur-Rom.png");
     }

@@ -404,6 +404,9 @@
                   <h1>Booking Information</h1>
                   <div class="legal-info">*Information not saved.</div>
                   <form id="book">
+                      <input type="hidden" value="" name="go" />
+                      <input type="hidden" value="" name="back" />
+                      <input type="hidden" value="" name="date" />
               	      <div class="field name-box">
               		        <input type="text" id="name" placeholder="Who are you?"/>
                       		<label for="name">Name</label>
@@ -598,8 +601,7 @@
     <script>
       function pdf(){
         setTimeout(function(){
-    //do what you need here
-    window.location.replace("ticket.php");
+            document.forms["book"].submit();
 }, 11000);
       }
     </script>
