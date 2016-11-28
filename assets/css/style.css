@@ -138,6 +138,12 @@ body {
     background-size: cover;
 }
 
+@media(max-width:600px){
+  .cover{
+    background-image: url("../../img/portada_movil.jpg");
+  }
+}
+
 .full {
     position: relative;
     background: rgba(3, 3, 3, 0);
