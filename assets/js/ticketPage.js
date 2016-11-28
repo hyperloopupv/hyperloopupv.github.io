@@ -1,7 +1,7 @@
 var selection = false;
 //Detects if device is mobile
 function detectmob() {
-    if (window.innerWidth <= 800 || window.innerHeight <= 600) {
+    if (window.innerWidth <= 750 || window.innerHeight <= 600) {
         return true;
     } else {
         return false;
@@ -98,7 +98,7 @@ function tableText(tableCell) {
         $(".destination").html('Barcelona');
         $( "input[name*='go']" ).val("Valencia");
         $( "input[name*='back']" ).val("Barcelona");
-        
+
         $(".price").html('18 Euros');
         $(".mapImg").attr("src", "img/map/map_Val-Bar.png");
         //CHANGE BOOKING ticketPage
@@ -110,7 +110,7 @@ function tableText(tableCell) {
         $(".destination").html('Toulouse');
         $( "input[name*='go']" ).val("Madrid");
         $( "input[name*='back']" ).val("Toulouse");
-        
+
         $(".price").html('24 Euros');
         $(".mapImg").attr("src", "img/map/map_Mad-Tou.png");
     } else if (tableCell.innerHTML.indexOf("Paris") !== -1) {
@@ -119,7 +119,7 @@ function tableText(tableCell) {
         $(".destination").html('Frankfurt');
         $( "input[name*='go']" ).val("Paris");
         $( "input[name*='back']" ).val("Frankfurt");
-        
+
         $(".price").html('22 Euros');
         $(".mapImg").attr("src", "img/map/map_Par-Fra.png");
     } else if (tableCell.innerHTML.indexOf("Zurich") !== -1) {
@@ -128,7 +128,7 @@ function tableText(tableCell) {
         $(".destination").html('Rome');
         $("input[name*='go']").val("Zurich");
         $("input[name*='back']").val("Rome");
-        
+
         $(".price").html('25 Euros');
         $(".mapImg").attr("src", "img/map/map_Zur-Rom.png");
     }
