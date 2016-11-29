@@ -31,7 +31,7 @@
       font-size:6em;
     }
     ul {
-    position:fixed;
+    position:absolute;
     top:50%;
     left: 50%;
     width:600px;
@@ -39,6 +39,7 @@
     margin-left:-350px;
     list-style:none;
     font-size: 16px;
+    display:block;
   }
   li {
         width:24.4333%;
@@ -50,6 +51,17 @@
           font-weight:bold;
         }
       }
+  @media(max-width: 600px){
+    .title{
+      font-size: 3em;
+    font-weight: 20;
+    vertical-align: top;
+    }
+    .full{
+      padding-top: 100px;
+    }
+
+  }
 </style>
 </head>
 
@@ -57,14 +69,14 @@
   <nav class="navbar scroll">
 
       <div class="nav-logo">
-          <a href="countdown.html" class="logo">
+          <a href="index" class="logo">
               <img src="img/logo.png">
           </a>
       </div>
     </nav>
   <section class="cover">
     <div class="full">
-  <div class="title col-md-12 text-center" style="padding:10%; line-height:2;">Countdown Until Launch</div>
+  <div class="title col-md-12 text-center col-xs-12" style="padding:10%; line-height:2;">Countdown Until Launch</div>
   <ul class="countdown">
       <li>
         <span class="days"></span>
