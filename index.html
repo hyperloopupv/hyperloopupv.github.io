@@ -44,7 +44,7 @@
                 <li><a href="team">Team</a></li>
                 <li><a href="partners">Partners</a></li>
                 <li><a href="buyTicket">Buy Ticket</a></li>
-                <li><a href="">Press</a></li>
+                <li><a href="https://drive.google.com/drive/u/0/folders/0B6yBcBUjVi8ZbF9yZFBKTEluQ1E">Press</a></li>
             </ul>
         </div>
 
@@ -334,14 +334,23 @@
             new WOW().init();
         });
         $(window).scroll(function() {
-$('video').each(function(){
-    if ($(this).visible( true )) {
-        $(this)[0].play();
-    } else {
-        $(this)[0].pause();
-    }
+          $('video').each(function(){
+              if ($(this).visible( true )) {
+                  $(this)[0].play();
+              } else {
+                  $(this)[0].pause();
+              }
+
+          })
+          });
+
+          $('video').hover(function toggleControls() {
+            if (this.hasAttribute("controls")) {
+                this.removeAttribute("controls")
+            } else {
+            this.setAttribute("controls", "controls")
+            }
 })
-});
     </script>
 
 </body>

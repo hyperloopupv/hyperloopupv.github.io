@@ -12,7 +12,7 @@ ob_start();
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Ticket ###</title>
+        <title>Ticket Hyperloop</title>
 
         <style>
             body {
@@ -25,12 +25,12 @@ ob_start();
                 display: inline-block;
 
             }
-            
+
             .b {
                 font-size: 40px;
                 line-height: 1;
             }
-            
+
             .s {
                 font-size: 15px;
                 line-height: 1;
@@ -46,12 +46,12 @@ ob_start();
                 float: left;
                 text-align: left;
             }
-            
+
             .right {
                 float: right;
                 text-align: right;
             }
-            
+
             .center {
                 float: left;
                 text-align: center;
@@ -65,7 +65,7 @@ ob_start();
             .tres {
                 width: 33.2%;
             }
-            
+
             .regular {
                 width: 66.6%;
                 padding-top: 50px;
@@ -79,7 +79,7 @@ ob_start();
                 height: 500px;
                 margin-top: 100px;
             }
-            
+
             .block .inline {
                 margin-bottom: 20px;
             }
@@ -109,13 +109,13 @@ ob_start();
             <div class="center regular">
                 <img src="img/qr.png" height="400px">
             </div>
-            
+
             <div class="right tres" style="padding-top: 70px;">
                 <div class="inline left"><div class="b">21'</div><div>Duration</div></div>
                 <div class="inline left"><div class="b">350Km</div><div>Distance</div></div>
-                <div class="inline left"><div class="b">BUSINESS</div><div>Class</div></div>
+                <div class="inline left"><div class="b">BUSSINES</div><div>Class</div></div>
             </div>
-        
+
         </div>
 
     </body>

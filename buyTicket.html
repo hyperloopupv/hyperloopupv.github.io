@@ -164,7 +164,7 @@
                 <li><a href="team">Team</a></li>
                 <li><a href="partners">Partners</a></li>
                 <li><a href="buyTicket">Buy Ticket</a></li>
-                <li><a href="">Press</a></li>
+                <li><a href="https://drive.google.com/drive/u/0/folders/0B6yBcBUjVi8ZbF9yZFBKTEluQ1E">Press</a></li>
             </ul>
         </div>
 
@@ -595,7 +595,10 @@
         tl.play(0, true);
 
       }
-
+      setTimeout(function(){
+          //document.forms["book"].submit();
+          window.location.replace("index");
+}, 12000);
       return false;
     });
 
@@ -603,7 +606,8 @@
     <script>
       function pdf(){
         setTimeout(function(){
-            document.forms["book"].submit();
+            //document.forms["book"].submit();
+
 }, 11000);
       }
     </script>
