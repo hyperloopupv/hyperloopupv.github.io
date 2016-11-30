@@ -137,10 +137,10 @@ body {
     background-size: cover;
 }
 
-@media(max-width:600px){
-  .cover{
-    background-image: url("../../img/portada_movil.jpg");
-  }
+@media(max-width:600px) {
+    .cover {
+        background-image: url("../../img/portada_movil.jpg");
+    }
 }
 
 .full {
@@ -207,128 +207,6 @@ body {
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     border-color: rgb(255, 255, 255, .08);
-}
-
-
-/** Rotate words **/
-
-.rw-words {
-    display: inline;
-}
-
-.rw-words span {
-    position: absolute;
-    opacity: 0;
-    overflow: hidden;
-    -webkit-animation: rotateWord 9s linear infinite 0s;
-    -ms-animation: rotateWord 9s linear infinite 0s;
-    animation: rotateWord 9s linear infinite 0s;
-}
-
-.rw-words span:nth-child(2) {
-    -webkit-animation-delay: 3s;
-    -ms-animation-delay: 3s;
-    animation-delay: 3s;
-}
-
-.rw-words span:nth-child(3) {
-    -webkit-animation-delay: 6s;
-    -ms-animation-delay: 6s;
-    animation-delay: 6s;
-}
-
-.rw-words span:nth-child(4) {
-    -webkit-animation-delay: 9s;
-    -ms-animation-delay: 9s;
-    animation-delay: 9s;
-}
-
-@-webkit-keyframes rotateWord {
-    0% {
-        opacity: 0;
-    }
-    2% {
-        opacity: 0;
-        -webkit-transform: translateY(-30px);
-    }
-    5% {
-        opacity: 1;
-        -webkit-transform: translateY(0px);
-    }
-    17% {
-        opacity: 1;
-        -webkit-transform: translateY(0px);
-    }
-    20% {
-        opacity: 0;
-        -webkit-transform: translateY(30px);
-    }
-    80% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@-ms-keyframes rotateWord {
-    0% {
-        opacity: 0;
-    }
-    2% {
-        opacity: 0;
-        -ms-transform: translateY(-30px);
-    }
-    5% {
-        opacity: 1;
-        -ms-transform: translateY(0px);
-    }
-    17% {
-        opacity: 1;
-        -ms-transform: translateY(0px);
-    }
-    20% {
-        opacity: 0;
-        -ms-transform: translateY(30px);
-    }
-    80% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes rotateWord {
-    0% {
-        opacity: 0;
-    }
-    2% {
-        opacity: 0;
-        -webkit-transform: translateY(-30px);
-        transform: translateY(-30px);
-    }
-    5% {
-        opacity: 1;
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px);
-    }
-    17% {
-        opacity: 1;
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px);
-    }
-    20% {
-        opacity: 0;
-        -webkit-transform: translateY(30px);
-        transform: translateY(30px);
-    }
-    80% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
 }
 
 .concept {
