@@ -1,7 +1,7 @@
 var selection = false;
 //Detects if device is mobile
 function detectmob() {
-    if (window.innerWidth <= 750 || window.innerHeight <= 600) {
+    if (window.innerWidth <= 750 || window.innerHeight <= 700) {
         return true;
     } else {
         return false;
