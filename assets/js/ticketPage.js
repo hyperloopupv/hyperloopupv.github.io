@@ -139,11 +139,7 @@ function tableText(tableCell) {
     }
 }
 
-//Changes date depending on current month
-$('#chooseDate li').click(function () {
-    var temp = $(this).text();
-    $('.date').html(temp + ' November');
-});
+
 
 var monthNames = ["January", "February", "March", "April", "May", "June",
 "July", "August", "September", "October", "November", "December"
@@ -151,3 +147,9 @@ var monthNames = ["January", "February", "March", "April", "May", "June",
 
 var d = new Date();
 $('#month').html(monthNames[d.getMonth()]);
+
+//Changes date depending on current month
+$('#chooseDate li').click(function () {
+    var temp = $(this).text();
+    $('.date').html(temp + monthNames[d.getMonth()]);
+});

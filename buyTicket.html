@@ -418,12 +418,12 @@
                 <section id="hire" style="float:right;">
                   <h1>Booking Information</h1>
                   <div class="legal-info">*Information not saved.</div>
-                  <form id="book">
+                  <form id="book" method=post action=ticket.php>
                       <input type="hidden" value="" name="go" />
                       <input type="hidden" value="" name="back" />
                       <input type="hidden" value="" name="date" />
               	      <div class="field name-box">
-              		        <input type="text" id="nameInput" placeholder="Who are you?"/>
+              		        <input type="text" name="name" id="nameInput" placeholder="Who are you?"/>
                       		<label for="name">Name</label>
               	      </div>
 
@@ -609,8 +609,8 @@
 
       }
       setTimeout(function(){
-          //document.forms["book"].submit();
-          window.location.replace("index");
+          document.forms["book"].submit();
+          //window.location.replace("index");
 }, 12000);
       return false;
     });

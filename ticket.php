@@ -1,7 +1,6 @@
 <?php
 
 // Libreria mPDF para sacar los tickets en PDF. La plantilla se hace con html pasandole valores GET con php (nombre, etc)
-
 require_once __DIR__ . '/vendor/mpdf/mpdf.php';
 
 ob_start();
