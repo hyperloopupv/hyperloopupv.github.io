@@ -95,7 +95,7 @@ ob_start();
 
         <div class="content">
             <div class="inline dos left"><div class="b">HL<?php echo rand(1000, 9999)?></div><div class="s">Reference no.</div></div>
-            <div class="inline dos right"><div class="b">27NOV16</div><div class="s">Date</div></div>
+            <div class="inline dos right"><div class="b"><?php echo $_POST['date'];?></div><div class="s">Date</div></div>
         </div>
 
         <div class="content">
@@ -110,9 +110,9 @@ ob_start();
             </div>
 
             <div class="right tres" style="padding-top: 70px;">
-                <div class="inline left"><div class="b">21'</div><div>Duration</div></div>
-                <div class="inline left"><div class="b">350Km</div><div>Distance</div></div>
-                <div class="inline left"><div class="b">BUSSINES</div><div>Class</div></div>
+                <div class="inline left"><div class="b"><?php echo $_POST['travelTime'];?></div><div>Duration</div></div>
+                <div class="inline left"><div class="b"><?php echo $_POST['km'];?></div><div>Distance</div></div>
+                <div class="inline left"><div class="b">BUSINESS</div><div>Class</div></div>
             </div>
 
         </div>

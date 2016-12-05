@@ -368,51 +368,7 @@
                 </ul>
 
             </div>
-            <!--CIRCLING LOAD BAR-->
-            <div id="bookTicket" style="display:none">
-              <div class="container">
-                <svg class="lineSVG" version="1.1" x="0px" y="0px" width="900px" height="600px" viewBox="0 0 900 600">
-                <defs>
 
-                <filter id="glow" width="400%" x="-50%" y="-50%" height="200%">
-                    <feGaussianBlur stdDeviation="2 2" result="coloredBlur"/>
-                    <feMerge>
-                        <feMergeNode in="coloredBlur"/>
-                        <feMergeNode in="SourceGraphic"/>
-                    </feMerge>
-                </filter>
-                <filter id="heavyGlow" width="400%" x="-50%" y="-50%" height="200%">
-                    <feGaussianBlur stdDeviation="9 9" result="coloredBlur"/>
-                    <feMerge>
-                        <feMergeNode in="coloredBlur"/>
-                        <feMergeNode in="SourceGraphic"/>
-                    </feMerge>
-                </filter>
-
-                </defs>
-                <line class="loadLineGhost" fill="none" stroke="#1E1E24" stroke-width="2" stroke-linecap="none" stroke-linejoin="none" stroke-miterlimit="10" x1="100" y1="340" x2="800" y2="340" opacity="0" />
-
-
-
-                <line class="loadLineTip" filter="url(#heavyGlow)" fill="none" stroke="#5CE2ED" stroke-width="2" stroke-linecap="none" stroke-linejoin="none" stroke-miterlimit="10" x1="100" y1="340" x2="800" y2="340" />
-
-                <g class="lineGroup" filter="url(#glow)" >
-                <line class="loadLine" fill="none" stroke="#5CE2ED" stroke-width="2" stroke-linecap="none" stroke-linejoin="none" stroke-miterlimit="10" x1="100" y1="340" x2="800" y2="340" />
-
-                <g class="refreshGroup" >
-
-                <path class="tick" fill="none" stroke="#5CE2ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-                	M53.5,11.4l-24,32.1l-14-9"/>
-
-                		<circle class="refreshCircle" fill="rgba(0,0,0,0)" stroke="#5CE2ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="30" cy="30" r="30"/>
-                </g>
-                  </g>
-
-                </svg>
-                  <div class="downloading">Booking, please wait...</div>
-                  <div class="refresh">Ticket booked!</div>
-                </div>
-            </div>
             <div id="pickMoreInfo" class="bookingTicket" style="display:none;">
               <div class="container" id="form">
                 <section id="hire" style="float:right;">
@@ -422,6 +378,8 @@
                       <input type="hidden" value="" name="go" />
                       <input type="hidden" value="" name="back" />
                       <input type="hidden" value="" name="date" />
+                      <input type="hidden" value="" name="travelTime" />
+                      <input type="hidden" value="" name="km" />
               	      <div class="field name-box">
               		        <input type="text" name="name" id="nameInput" placeholder="Who are you?"/>
                       		<label for="name">Name</label>
@@ -451,180 +409,10 @@
       $("#map").hide();
       $("#pickMoreInfo").hide();
       $("#bookTicket").fadeIn("slow");
-      //SVG BOOKING ANIMATION
-      var container = document.querySelector('.container');
-      var lineSVG = document.querySelector('.lineSVG');
-      var downloading = document.querySelector('.downloading');
-      var refresh = document.querySelector('.refresh');
-      var loadLine = document.querySelector('.loadLine');
-      var loadLineTip = document.querySelector('.loadLineTip');
-      var loadLineGhost = document.querySelector('.loadLineGhost');
-      var refreshCircle = document.querySelector('.refreshCircle');
-      var tick = document.querySelector('.tick');
-      var refreshGroup = document.querySelector('.refreshGroup');
-      var failAt = 100; //percent
-      var glowTipLengthPercent = 5;
-      var lineStart = Number(loadLine.getAttribute('x1'));
-      var lineEnd = Number(loadLine.getAttribute('x2'));
-      var lineLength =  lineEnd -  lineStart;
-      var failPercent = failAt/100; //percent
-      var refreshCircleRadius = Number(refreshCircle.getAttribute('r'));
-      var refreshCircleRadiusAsPercentOfLine = (refreshCircleRadius/lineLength) * 100;
-
-      TweenMax.set(container, {
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          xPercent: -50,
-          yPercent: -50
-      })
-
-      TweenMax.set([loadLine, loadLineTip], {
-        drawSVG:'-0.5% 0%'
-      })
-
-      TweenMax.set([tick], {
-        drawSVG:'0% 0%',
-        alpha:0
-      })
-      TweenMax.set([refreshCircle], {
-        drawSVG:'0% 0%',
-        alpha:0
-      })
-      TweenMax.set([refreshGroup], {
-        y:310
-      })
-
-      var tl = new TimelineMax({onComplete:playAgain});
-      tl.set(refreshGroup, {
-        alpha:1,
-        x:(failPercent * lineLength) + lineStart - (refreshCircleRadius*2)
-      })
-
-      .to(loadLineGhost, 1,{
-        alpha:0.5
-      })
-      .to([loadLine,], 6, {
-        drawSVG:failAt +'% 0%',
-        ease:SteppedEase.config(40)
-      })
-
-      .to([loadLineTip,], 6, {
-        drawSVG:failAt +'% ' + (failAt - glowTipLengthPercent)+'%',
-        ease:SteppedEase.config(40)
-      },'-=6')
-      .from([loadLine, loadLineTip], 0.1,{
-        immediateRender:false,
-        stroke:'green',
-        repeat:12,
-        yoyo:true
-      })
-
-      .set([ refreshCircle], {
-        alpha:1
-      })
-      .to(loadLineTip, 1, {
-        drawSVG:(failAt)+'% ' + (failAt)+'%'
-      })
-
-
-       .to([ refreshCircle], 1, {
-        drawSVG:'0% 88%'
-      },'-=1')
-      .to([loadLine, loadLineTip], 1, {
-        drawSVG:(failAt)+'% ' + (failAt)+'%'
-      },'-=1')
-      .set([ tick], {
-        alpha:1
-      })
-
-      .to([ tick], 1, {
-        drawSVG:'95% 0%'
-      })
-
-      .to(refreshGroup, 2, {
-        x:(lineLength/2) + (lineStart - (refreshCircleRadius)),
-        rotation:-360,
-        transformOrigin:'50% 50%',
-        ease:Power3.easeInOut
-      }, '-=1')
-
-      .to([ refreshCircle], 1, {
-        drawSVG:'0% 100%'
-      },'-=2')
-      .to([ tick], 1, {
-        drawSVG:'95% 20%'
-      },'-=2')
-      .set([loadLine, loadLineTip], {
-        alpha:0
-      })
-
-
-
-      .to(loadLineGhost, 2, {
-        alpha:0,
-        ease:Power3.easeInOut
-      }, '-=2')
-      .to(refresh, 0.5, {
-        alpha:1,
-        ease:Power2.easeInOut
-      })
-      .to(downloading, 0.5, {
-        alpha:0,
-        ease:Power2.easeInOut
-      },'-=0.5')
-      .to([downloading, refresh], 0.5, {
-        top:'+=10',
-        ease:Power2.easeInOut
-      }, '-=0.5')
-
-      .addPause()
-
-      .to(refreshGroup,0.3, {
-        alpha:0
-      })
-      .to(refresh, 0.5, {
-        alpha:0,
-        ease:Power2.easeInOut
-      })
-      .to(downloading, 0.5, {
-        alpha:1,
-        ease:Power2.easeInOut
-      },'-=0.5')
-      .to([downloading, refresh], 0.5, {
-        top:'-=10',
-        ease:Power2.easeInOut
-      }, '-=0.5')
-
-      //end timeline
-
-      refreshCircle.onclick = fadeOut;
-
-      function fadeOut(){
-        tl.resume();
-      }
-      function playAgain(){
-
-        tl.play(0, true);
-
-      }
-      setTimeout(function(){
-          document.forms["book"].submit();
-          //window.location.replace("index");
-}, 12000);
-      return false;
+      document.forms["book"].submit();
     });
 
     </script>
-    <script>
-      function pdf(){
-        setTimeout(function(){
-            //document.forms["book"].submit();
-
-}, 11000);
-      }
-    </script>
-
     <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');

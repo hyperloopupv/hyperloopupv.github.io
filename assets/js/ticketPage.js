@@ -103,6 +103,8 @@ function tableText(tableCell) {
         $(".destination").html('Barcelona');
         $( "input[name*='go']" ).val("Valencia");
         $( "input[name*='back']" ).val("Barcelona");
+        $( "input[name*='travelTime']" ).val("21 Minutes");
+        $( "input[name*='km']" ).val("330km");
 
         $(".price").html('18 Euros');
         $(".mapImg").attr("src", "img/map/map_Val-Bar.png");
@@ -115,6 +117,8 @@ function tableText(tableCell) {
         $(".destination").html('Toulouse');
         $( "input[name*='go']" ).val("Madrid");
         $( "input[name*='back']" ).val("Toulouse");
+        $( "input[name*='travelTime']" ).val("36 Minutes");
+        $( "input[name*='km']" ).val("554km");
 
         $(".price").html('24 Euros');
         $(".mapImg").attr("src", "img/map/map_Mad-Tou.png");
@@ -124,6 +128,8 @@ function tableText(tableCell) {
         $(".destination").html('Frankfurt');
         $( "input[name*='go']" ).val("Paris");
         $( "input[name*='back']" ).val("Frankfurt");
+        $( "input[name*='travelTime']" ).val("29 Minutes");
+        $( "input[name*='km']" ).val("478km");
 
         $(".price").html('22 Euros');
         $(".mapImg").attr("src", "img/map/map_Par-Fra.png");
@@ -133,6 +139,8 @@ function tableText(tableCell) {
         $(".destination").html('Rome');
         $("input[name*='go']").val("Zurich");
         $("input[name*='back']").val("Rome");
+        $( "input[name*='travelTime']" ).val("41 Minutes");
+        $( "input[name*='km']" ).val("685km");
 
         $(".price").html('25 Euros');
         $(".mapImg").attr("src", "img/map/map_Zur-Rom.png");
@@ -152,4 +160,5 @@ $('#month').html(monthNames[d.getMonth()]);
 $('#chooseDate li').click(function () {
     var temp = $(this).text();
     $('.date').html(temp + monthNames[d.getMonth()]);
+    $( "input[name*='date']" ).val(temp + monthNames[d.getMonth()]);
 });
