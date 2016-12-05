@@ -1,14 +1,7 @@
 var selection = false;
 //Detects if device is mobile
-function detectmob() {
-   if(window.innerWidth <= 800 && window.innerHeight <= 600) {
-     return true;
-   } else {
-     return false;
-   }
-}
-if (detectmob()) {
-    window.location.replace("mobile.html");;
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      window.location.replace("mobile.html");
 }
 
 
