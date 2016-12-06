@@ -16,6 +16,7 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    background-color: #FFF;
     /* Fix */
 }
 
@@ -107,12 +108,12 @@ body {
     display: block;
     width: 10px;
     height: 10px;
-    margin-left: -5px;
+    margin-left: -15.5px;
     position: absolute;
     left: 50%;
-    bottom: 4px;
-    color: #111;
-    font-size: 15px;
+    bottom: 25px;
+    color: #333;
+    font-size: 50px;
     -webkit-animation: scroll-down-anim 1s infinite;
     -moz-animation: scroll-down-anim 1s infinite;
     -o-animation: scroll-down-anim 1s infinite;
@@ -138,9 +139,9 @@ body {
 .scroll-down:before {
     display: block;
     content: "";
-    width: 20px;
-    height: 20px;
-    margin: 0 0 0 -10px;
+    width: 40px;
+    height: 40px;
+    margin: 0 0 0 -20px;
     position: absolute;
     bottom: 0;
     left: 50%;
