@@ -4,6 +4,14 @@
 require_once __DIR__ . '/vendor/mpdf/mpdf.php';
 
 ob_start();
+
+
+if(isset($_POST['email']) && isset($_POST['field2'])) {
+  $data = $_POST['email'] . '-' . $_POST['field2'] . "\n";
+  $ret = file_put_contents('/tmp/emails.txt', $data, FILE_APPEND | LOCK_EX);
+else {
+   //NOTHING
+}
 ?>
 
 <!doctype html>
