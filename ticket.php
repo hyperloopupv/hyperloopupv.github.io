@@ -105,7 +105,7 @@ ob_start();
         <div class="content">
             <div class="inline tres left"><div class="b"><?php echo $_POST['go'];?></div></div>
             <div class="tres center"><img src="img/s.png"></div>
-            <div class="inline tres right"><div class="b"><?php echo $_POST['back'];?></div></div></div>
+            <div class="inline tres right"><div class="b"><?php echo $_POST['back'];?></div></div>
         </div>
 
         <div class="block">
