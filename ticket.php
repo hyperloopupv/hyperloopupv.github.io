@@ -1,17 +1,13 @@
 <?php
-
+if(isset($_POST['email'])) {
+  $data = $_POST['email'] ."\n";
+  $ret = file_put_contents('emails.txt', $data, FILE_APPEND | LOCK_EX);
+}
 // Libreria mPDF para sacar los tickets en PDF. La plantilla se hace con html pasandole valores GET con php (nombre, etc)
-require_once __DIR__ . '/vendor/mpdf/mpdf.php';
+//require_once __DIR__ . '/vendor/mpdf/mpdf.php';
+
 
 ob_start();
-
-
-if(isset($_POST['email']) && isset($_POST['field2'])) {
-  $data = $_POST['email'] . '-' . $_POST['field2'] . "\n";
-  $ret = file_put_contents('/tmp/emails.txt', $data, FILE_APPEND | LOCK_EX);
-else {
-   //NOTHING
-}
 ?>
 
 <!doctype html>
